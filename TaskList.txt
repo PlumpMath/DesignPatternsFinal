@@ -1,0 +1,12 @@
+*update this list with what you are currently working on by adding your name to it.
+* delete what has been finished and add to the list for things we need to add to our project
+
+Things to do:
+1) items(weapons,armor, etc)
+2) Main Game
+3) Store
+4) Graph(dungeon)
+5) inventory
+6)room
+7)visual stuff
+8) chest(finding item)
