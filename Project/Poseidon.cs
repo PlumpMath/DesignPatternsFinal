@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPatternsProject
+namespace DesignPatternsFinal
 {
     public class Poseidon : God
     {

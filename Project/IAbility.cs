@@ -1,9 +1,13 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace DesignPatternsProject
+namespace DesignPatternsFinal
 {
-	public interface IAbility
-	{
-		void ability( Party party );
-	}
+    public interface IAbility
+    {
+        void ability(Party party);
+    }
 }
