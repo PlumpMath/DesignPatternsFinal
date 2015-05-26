@@ -23,7 +23,7 @@ namespace DesignPatternsProject
         {
             this.away = away;
         }
-        public void battle()
+        public string battle()
         {
             List<int> speed = new List<int>() ;
 
@@ -66,16 +66,20 @@ namespace DesignPatternsProject
                     }
                 }
             }
-            Console.Write("The battle is over.");
+            //Console.Write("The battle is over.");
+            string response = ("The battle is over.\n");
             if (home.size() == 0)
-                Console.WriteLine("You lost...");
+                return response + ("You lost...");
+                //Console.WriteLine("You lost...");
             else
-                Console.WriteLine("You won!");
+                return response + ("You won!");
+                //Console.WriteLine("You won!");
             
         }
 
-        private void killed( List<int> speed )
+        private string killed( List<int> speed )
         {
+            string response = "";
             for( int i = 0 ; i < speed.Count ; i++)
             {
                 if( i < home.size() )
@@ -83,7 +87,8 @@ namespace DesignPatternsProject
                     Character test = home.getCharacter(i);
                     if( test.getHp() <= 0 )
                     {
-                        Console.WriteLine(test.getName() + " has been killed.");
+                        response += test.getName() + " has been killed.\n";
+                        //Console.WriteLine(test.getName() + " has been killed.");
                         speed.RemoveAt(i);
                         home.removeCharacter(i);
                         i--;
@@ -95,13 +100,15 @@ namespace DesignPatternsProject
                     Character test = away.getCharacter(awayIx);
                     if (test.getHp() <= 0)
                     {
-                        Console.WriteLine(test.getName() + " has been killed.");
+                        response += test.getName() + " has been killed.\n";
+                        //Console.WriteLine(test.getName() + " has been killed.");
                         speed.RemoveAt(i);
                         away.removeCharacter(awayIx);
                         i--;
                     }
                 }
             }
+            return response;
         }
     }
 }

@@ -22,8 +22,9 @@ namespace DesignPatternsProject
         public abstract void turn( Party team, Party enemies );
         public abstract Character aim(Party enemy);
 
-        public void attack(Party enemy)
+        public string attack(Party enemy)
         {
+            string response = "";
             this.setStanceMultiplier(1.0);
             Character target = aim(enemy);
 
@@ -31,16 +32,21 @@ namespace DesignPatternsProject
             double newHP = oldHP - this.getStength() * target.getStanceMultiplier();
             target.setHp((int)newHP);
 
-            Console.WriteLine(this.getName() + " attacked " + target.getName() + ".");
-            Console.WriteLine(target.getName() + " lost " + this.getStength() + " HP and now has "
-                + target.getHp() + " left.");
+            //Console.WriteLine(this.getName() + " attacked " + target.getName() + ".");
+            response += this.getName() + " attacked " + target.getName() + ".\n";
+            response += target.getName() + " lost " + this.getStength() + " HP and now has " + target.getHp() + " left.";
+            /*Console.WriteLine(target.getName() + " lost " + this.getStength() + " HP and now has "
+                + target.getHp() + " left.");*/
+            return response;
         }
 
 
-        public void defend()
+        public string defend()
         {
-            Console.WriteLine(this.getName() + " is now defending.");
             setStanceMultiplier(.25);
+            return(this.getName() + " is now defending.");
+            //Console.WriteLine(this.getName() + " is now defending.");
+            
         }
 
         public int getSpeed()

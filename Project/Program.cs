@@ -1,24 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DesignPatternsProject
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            List<Character> h = new List<Character>();
-            for (int i = 0; i < 3; i++)
-                h.Add(new Poseidon());
-            List<Character> a = new List<Character>();
-            for (int i = 0; i < 2; i++)
-                a.Add(new Beast());
-
-            Party home = new Party(h);
-            Party away = new Party(a);
-
-            Battle battlefield = new Battle(home, away);
-            battlefield.battle();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
     }
 }
