@@ -2,18 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace DesignPatternsProject
+namespace DesignPatternsFinal
 {
 
     public class Party : IEnumerable<Character>
     {
         private List<Character> party;
-        private Room location;
 
         public Party()
         {
             party = new List<Character>();
-            location = null;
         }
 
         public Party( List<Character> party )
@@ -44,11 +42,6 @@ namespace DesignPatternsProject
                 //Console.WriteLine("No character at this location.");
                 throw new IndexOutOfRangeException("No character at this location.");
             }
-        }
-
-        public void setLocation( Room goTo )
-        {
-            location = goTo;
         }
 
         public int size()

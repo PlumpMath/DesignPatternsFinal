@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DesignPatternsProject
+namespace DesignPatternsFinal
 {
     public class Battle
     {

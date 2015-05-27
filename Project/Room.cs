@@ -1,15 +1,19 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace DesignPatternsProject
+namespace DesignPatternsFinal
 {
-	public class Room
-	{
-		private int roomNum;
+    public class Room
+    {
+        private int roomNum;
 
-		public Room ( int roomNum )
-		{
-			this.roomNum = roomNum;
-		}
+        public Room(int roomNum)
+        {
+            this.roomNum = roomNum;
+        }
 
         public int getRoomNum()
         {
@@ -20,6 +24,5 @@ namespace DesignPatternsProject
         {
             return "room #" + roomNum;
         }
-	}
+    }
 }
-

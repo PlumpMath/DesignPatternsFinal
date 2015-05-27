@@ -3,7 +3,7 @@ using System.Text;
 using System.IO;
 using System.Windows.Forms;
 
-namespace DesignPatternsProject
+namespace DesignPatternsFinal
 {
     public class ConsoleToTextbox_Adaptor : TextWriter
     {

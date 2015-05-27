@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPatternsProject
+namespace DesignPatternsFinal
 {
     public abstract class Character
     {
