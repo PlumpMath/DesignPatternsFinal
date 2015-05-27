@@ -1,23 +1,26 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Project
+namespace DesignPatternsFinal
 {
-	public class Dungeon : LinkedList<Room>
-	{
-		LinkedList<Room>[] dungeon;
-		Room mid;
-		Room start;
+    public class Dungeon : LinkedList<Room>
+    {
+        LinkedList<Room>[] dungeon;
+        Room mid;
+        Room start;
         Room end;
 
-		public Dungeon()
-		{
-			this.dungeon = new LinkedList<Room>[55];
-			for (int i=0; i < dungeon.Length ; i++) 
-			{
-				dungeon [i] = new LinkedList<Room> ();
-			}
-		}
+        public Dungeon()
+        {
+            this.dungeon = new LinkedList<Room>[55];
+            for (int i = 0; i < dungeon.Length; i++)
+            {
+                dungeon[i] = new LinkedList<Room>();
+            }
+        }
 
         public Room getMid()
         {
@@ -34,84 +37,84 @@ namespace Project
             return this.end;
         }
 
-		public void generateDungeon()
-		{
-			Room curr = new Room (1);
+        public void generateDungeon()
+        {
+            Room curr = new Room(1);
             this.start = curr;
-			dungeon[4].AddFirst(curr);
+            dungeon[4].AddFirst(curr);
 
-			curr = new Room (2);
-			dungeon[3].AddFirst(curr);
-			dungeon[7].AddFirst(curr);
+            curr = new Room(2);
+            dungeon[3].AddFirst(curr);
+            dungeon[7].AddFirst(curr);
 
-			curr = new Room (3);
-			dungeon[2].AddFirst(curr);
-			dungeon[8].AddFirst(curr);
-			dungeon[4].AddFirst(curr);
+            curr = new Room(3);
+            dungeon[2].AddFirst(curr);
+            dungeon[8].AddFirst(curr);
+            dungeon[4].AddFirst(curr);
 
-			curr = new Room (4);
-			dungeon[3].AddFirst(curr);
-			dungeon[5].AddFirst(curr);
-			dungeon[1].AddFirst(curr);
+            curr = new Room(4);
+            dungeon[3].AddFirst(curr);
+            dungeon[5].AddFirst(curr);
+            dungeon[1].AddFirst(curr);
 
-			curr = new Room (5);
-			dungeon[4].AddFirst(curr);
-			dungeon[9].AddFirst(curr);
-			dungeon[6].AddFirst(curr);
+            curr = new Room(5);
+            dungeon[4].AddFirst(curr);
+            dungeon[9].AddFirst(curr);
+            dungeon[6].AddFirst(curr);
 
-			curr = new Room (6);
-			dungeon[10].AddFirst(curr);
-			dungeon[5].AddFirst(curr);
+            curr = new Room(6);
+            dungeon[10].AddFirst(curr);
+            dungeon[5].AddFirst(curr);
 
-			curr = new Room (7);
-			dungeon[12].AddFirst(curr);
-			dungeon[8].AddFirst(curr);
-			dungeon[2].AddFirst(curr);
+            curr = new Room(7);
+            dungeon[12].AddFirst(curr);
+            dungeon[8].AddFirst(curr);
+            dungeon[2].AddFirst(curr);
 
-			curr = new Room (8);
-			dungeon[13].AddFirst(curr);
-			dungeon[7].AddFirst(curr);
-			dungeon[3].AddFirst(curr);
+            curr = new Room(8);
+            dungeon[13].AddFirst(curr);
+            dungeon[7].AddFirst(curr);
+            dungeon[3].AddFirst(curr);
 
-			curr = new Room (9);
-			dungeon[14].AddFirst(curr);
-			dungeon[10].AddFirst(curr);
-			dungeon[5].AddFirst(curr);
+            curr = new Room(9);
+            dungeon[14].AddFirst(curr);
+            dungeon[10].AddFirst(curr);
+            dungeon[5].AddFirst(curr);
 
-			curr = new Room (10);
-			dungeon[15].AddFirst(curr);
-			dungeon[9].AddFirst(curr);
-			dungeon[6].AddFirst(curr);
+            curr = new Room(10);
+            dungeon[15].AddFirst(curr);
+            dungeon[9].AddFirst(curr);
+            dungeon[6].AddFirst(curr);
 
-			curr = new Room (11);
-			dungeon[17].AddFirst(curr);
-			dungeon[12].AddFirst(curr);
+            curr = new Room(11);
+            dungeon[17].AddFirst(curr);
+            dungeon[12].AddFirst(curr);
 
-			curr = new Room (12);
-			dungeon[7].AddFirst(curr);
-			dungeon[11].AddFirst(curr);
-			dungeon[18].AddFirst(curr);
-			dungeon[13].AddFirst(curr);
+            curr = new Room(12);
+            dungeon[7].AddFirst(curr);
+            dungeon[11].AddFirst(curr);
+            dungeon[18].AddFirst(curr);
+            dungeon[13].AddFirst(curr);
 
-			curr = new Room (13);
-			dungeon[8].AddFirst(curr);
-			dungeon[12].AddFirst(curr);
-			dungeon[19].AddFirst(curr);
+            curr = new Room(13);
+            dungeon[8].AddFirst(curr);
+            dungeon[12].AddFirst(curr);
+            dungeon[19].AddFirst(curr);
 
-			curr = new Room (14);
-			dungeon[9].AddFirst(curr);
-			dungeon[15].AddFirst(curr);
-			dungeon[20].AddFirst(curr);
+            curr = new Room(14);
+            dungeon[9].AddFirst(curr);
+            dungeon[15].AddFirst(curr);
+            dungeon[20].AddFirst(curr);
 
-			curr = new Room (15);
-			dungeon[10].AddFirst(curr);
-			dungeon[14].AddFirst(curr);
-			dungeon[21].AddFirst(curr);
-			dungeon[16].AddFirst(curr);
+            curr = new Room(15);
+            dungeon[10].AddFirst(curr);
+            dungeon[14].AddFirst(curr);
+            dungeon[21].AddFirst(curr);
+            dungeon[16].AddFirst(curr);
 
-			curr = new Room (16);
-			dungeon[15].AddFirst(curr);
-			dungeon[22].AddFirst(curr);
+            curr = new Room(16);
+            dungeon[15].AddFirst(curr);
+            dungeon[22].AddFirst(curr);
 
             curr = new Room(17);
             dungeon[18].AddFirst(curr);
@@ -302,6 +305,6 @@ namespace Project
             curr = new Room(54);
             this.end = curr;
             dungeon[52].AddFirst(curr);
-		}
-	}
+        }
+    }
 }
