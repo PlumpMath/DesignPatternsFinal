@@ -41,8 +41,8 @@ namespace DesignPatternsFinal
             ITEM = 3
         }
 
-        public abstract IAbility turn( ref Party team, ref Party enemies );
-        public abstract Character aim(ref Party enemy);
+        public abstract IAbility turn(Party team, Party enemies );
+        public abstract Character aim(Party enemy);
 
         public object Clone()
         {

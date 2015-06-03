@@ -13,7 +13,7 @@ namespace DesignPatternsFinal
         {
             own = owner;
         }
-        public string ability(ref Party party)
+        public string ability(Party party)
         {
             own.Stance = .25;
             return (own.Name + " is now defending.");

@@ -42,7 +42,9 @@ namespace DesignPatternsFinal
                     {
                         if (away.size() > 0)
                         {
-                            home.getCharacter(i).turn(ref home, ref away);
+                            IAbility action;
+                            action = home.getCharacter(i).turn(home, away);
+                            action.ability(away);
                             speed[i] = home.getCharacter(i).Dex;
                             killed(speed);
                         }
@@ -58,7 +60,7 @@ namespace DesignPatternsFinal
                     {
                         if (home.size() > 0)
                         {
-                            away.getCharacter(i).turn(ref away, ref home);
+                            away.getCharacter(i).turn(away, home);
                             speed[ix] = home.getCharacter(i).Dex;
                             killed(speed);
                         }

@@ -24,7 +24,7 @@ namespace DesignPatternsFinal
         override
         public void specialAbility(Party team, Party enemies)
         {
-            this.special.ability(ref enemies);
+            this.special.ability(enemies);
             this.Stance = 1.0;
          }
     }

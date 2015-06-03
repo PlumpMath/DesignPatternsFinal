@@ -14,11 +14,11 @@ namespace DesignPatternsFinal
         {
             owner = own;
         }
-        public string ability(ref Party party)
+        public string ability(Party party)
         {
             string response = "";
             owner.Stance = 1.0;
-            Character target = owner.aim(ref party);
+            Character target = owner.aim(party);
             int oldHP = target.HP;
             double newHP = oldHP - owner.Str * target.Stance;
             target.HP = ((int)newHP);

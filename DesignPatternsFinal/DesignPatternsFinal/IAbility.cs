@@ -8,7 +8,7 @@ namespace DesignPatternsFinal
 {
     public interface IAbility
     {
-        String ability(ref Party party);
+        String ability(Party party);
         String getName();
     }
 }

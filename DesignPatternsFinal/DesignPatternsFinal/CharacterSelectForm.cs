@@ -18,8 +18,6 @@ namespace DesignPatternsFinal
         public CharacterSelectForm(Party there)
         {
             InitializeComponent();
-
-            Party target;
             target = there;
         }
         public Character getDecision()

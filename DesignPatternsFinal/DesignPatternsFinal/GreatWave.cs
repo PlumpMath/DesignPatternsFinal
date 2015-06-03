@@ -12,7 +12,7 @@ namespace DesignPatternsFinal
         {
             return "Great Wave";
         }
-        public String ability(ref Party party)
+        public String ability(Party party)
         {
             String response = "";
 

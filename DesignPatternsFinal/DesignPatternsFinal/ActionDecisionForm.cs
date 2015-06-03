@@ -14,6 +14,7 @@ namespace DesignPatternsFinal
     {
         private God current;
         private IAbility decision;
+
         public ActionDecisionForm(God player)
         {
             current = player;

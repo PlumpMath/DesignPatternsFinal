@@ -9,7 +9,7 @@ namespace DesignPatternsFinal
         public abstract void specialAbility(Party team, Party enemies);
 
         override
-        public IAbility turn( ref Party team, ref Party enemies )
+        public IAbility turn(Party team, Party enemies )
         {
             ActionDecisionForm turn = new ActionDecisionForm(this);
             turn.ShowDialog();
@@ -17,7 +17,7 @@ namespace DesignPatternsFinal
         }
 
         override
-        public Character aim(ref Party enemy)
+        public Character aim(Party enemy)
         {
             CharacterSelectForm choice = new CharacterSelectForm(enemy);
             choice.ShowDialog();
