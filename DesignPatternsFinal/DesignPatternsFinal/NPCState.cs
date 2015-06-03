@@ -8,14 +8,18 @@ namespace DesignPatternsFinal
     public class NPCState : State
     {
         private static NPCState _npcState;
-        private System.Windows.Forms.Form NPCForm;
+        private static System.Windows.Forms.Form NPCForm;
 
-        private NPCState()
+        public NPCState()
         {
-            NPCForm = new NPCViewForm();
-            base.npcState = _npcState;
+            if ((_npcState == null))
+            {
+                NPCForm = new NPCViewForm();
+                _npcState = this;
+                npcState = _npcState;
+            }
         }
-        override protected void toNPC() { }
+        new public void toNPC() { }
 
         override public System.Windows.Forms.Form StateView()
         {

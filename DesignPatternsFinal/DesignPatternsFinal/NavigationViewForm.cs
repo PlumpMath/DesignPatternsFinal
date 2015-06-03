@@ -51,6 +51,7 @@ namespace DesignPatternsFinal
                 theButton.Click += delegate
                 {
                     _dungeon.moveTo(r);
+                    //this.
                     this.repopulate();
                     this.Update();
                 };

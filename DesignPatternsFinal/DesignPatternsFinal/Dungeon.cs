@@ -8,14 +8,16 @@ namespace DesignPatternsFinal
 {
     public class Dungeon : LinkedList<Room>
     {
+        private static World theWorld;
         LinkedList<Room>[] dungeon;
         Room current;
         Room mid;
         Room start;
         Room end;
 
-        public Dungeon()
+        public Dungeon(World world)
         {
+            theWorld = world;
             this.dungeon = new LinkedList<Room>[55];
             for (int i = 0; i < dungeon.Length; i++)
             {
@@ -26,10 +28,11 @@ namespace DesignPatternsFinal
         {
             return dungeon[current.getRoomNum()].ToArray();
         }
-        public void moveTo(Room there)
+        public String moveTo(Room there)
         {
             current = there;
             current.arrive();
+            return current.getDes();
         }
 
         public Room getMid()
@@ -51,8 +54,9 @@ namespace DesignPatternsFinal
         {
             List<Character> them = new List<Character>();
             them.Add(new Hydra());
+            them.Add(new Hydra());
             Party badguys = new Party(them);
-            BattleEvent b = new BattleEvent(ref badguys);
+            BattleEvent b = new BattleEvent(theWorld.heroParty, badguys);
             Room curr = new Room(1);
             this.start = curr;
             dungeon[4].AddFirst(curr);

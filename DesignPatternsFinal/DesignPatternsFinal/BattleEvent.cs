@@ -5,18 +5,28 @@ using System.Text;
 
 namespace DesignPatternsFinal
 {
-    class BattleEvent : Event
+    public class BattleEvent : Event
     {
-        Battle b;
-        Party p;
-        public BattleEvent(ref Party mon)
+        private Battle b;
+        private Party h;
+        private Party a;
+        public BattleEvent(Party her, Party mon)
         {
-            p = mon;
+            h = her;
+            a = mon;
+            b = new Battle(ref h, ref a);
         }
-        public override void onTrigger()
+        public void onTrigger()
         {
-            b = new Battle(ref p, ref p);
-            b.battle();
+            State.toBattle(this);
+        }
+        public Party getFoes()
+        {
+            return a;
+        }
+        public Battle startFight()
+        {
+            return b;
         }
     }
 }

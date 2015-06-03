@@ -5,12 +5,8 @@ using System.Text;
 
 namespace DesignPatternsFinal
 {
-    public abstract class Event
+    public interface Event
     {
-        public Event()
-        {
-
-        }
-        public abstract void onTrigger();
+        void onTrigger();
     }
 }

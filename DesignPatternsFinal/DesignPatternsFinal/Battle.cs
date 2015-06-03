@@ -23,20 +23,18 @@ namespace DesignPatternsFinal
         {
             this.away = away;
         }
-        public string battle()
+        public String battle()
         {
             List<int> speed = new List<int>() ;
 
             foreach( Character person in home )
                 speed.Add(person.Dex);
-                //speed.Add( person.getSpeed() );
             foreach (Character person in away)
                 speed.Add(person.Dex);
-                //speed.Add( person.getSpeed() );
 
-            while( home.size() > 0 && away.size() > 0 )
+            while (home.size() > 0 && away.size() > 0)
             {
-                for (int i = 0; i < home.size(); i++ )
+                for (int i = 0; i < home.size(); i++)
                 {
                     if (speed[i] != 0)
                         speed[i]--;
@@ -46,7 +44,6 @@ namespace DesignPatternsFinal
                         {
                             home.getCharacter(i).turn(ref home, ref away);
                             speed[i] = home.getCharacter(i).Dex;
-                            //speed[i] = home.getCharacter(i).getSpeed();
                             killed(speed);
                         }
                     }
@@ -63,22 +60,16 @@ namespace DesignPatternsFinal
                         {
                             away.getCharacter(i).turn(ref away, ref home);
                             speed[ix] = home.getCharacter(i).Dex;
-                            //speed[ix] = home.getCharacter(i).getSpeed();
                             killed(speed);
-
                         }
                     }
                 }
             }
-            //Console.Write("The battle is over.");
-            string response = ("The battle is over.\n");
+            String response = ("The battle is over.\n");
             if (home.size() == 0)
                 return response + ("You lost...");
-                //Console.WriteLine("You lost...");
             else
                 return response + ("You won!");
-                //Console.WriteLine("You won!");
-            
         }
 
         private string killed( List<int> speed )
@@ -89,12 +80,9 @@ namespace DesignPatternsFinal
                 if( i < home.size() )
                 {
                     Character test = home.getCharacter(i);
-                    //if (test.getHp() <= 0)
                     if( test.HP <= 0 )
                     {
                         response += test.Name + " has been killed.\n";
-                        //response += test.getName() + " has been killed.\n";
-                        //Console.WriteLine(test.getName() + " has been killed.");
                         speed.RemoveAt(i);
                         home.removeCharacter(i);
                         i--;
@@ -104,12 +92,9 @@ namespace DesignPatternsFinal
                 {
                     int awayIx = i - home.size();
                     Character test = away.getCharacter(awayIx);
-                    //if (test.getHp() <= 0)
                     if (test.HP <= 0)
                     {
-                        //response += test.getName() + " has been killed.\n";
                         response += test.Name + " has been killed.\n";
-                        //Console.WriteLine(test.getName() + " has been killed.");
                         speed.RemoveAt(i);
                         away.removeCharacter(awayIx);
                         i--;

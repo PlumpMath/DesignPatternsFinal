@@ -17,20 +17,23 @@ namespace DesignPatternsFinal
 
         private World(Party heros)
         {
-            heroParty = heros;
-            theDungeon = new Dungeon();
-            theDungeon.generateDungeon();
             theWorld = this;
+            heroParty = heros;
+            theDungeon = new Dungeon(theWorld);
+            theDungeon.generateDungeon();
+            //theWorld = this;
         }
 
         public static World init(ref Party heros)
         {
             theWorld = new World(heros);
-            theWorld.currentState = State.initState(ref theWorld);
+            theWorld.currentState = State.initState(theWorld);
             return theWorld;
         }
         public void init()
         {
+            PrimaryViewForm mainView = new PrimaryViewForm(this);
+            mainView.Show();
             this.currentState.StateView().Show();
         }
     }

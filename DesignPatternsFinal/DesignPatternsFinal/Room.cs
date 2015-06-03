@@ -10,6 +10,7 @@ namespace DesignPatternsFinal
     {
         private int roomNum;
         private Event t;
+        private String description;
 
         public Room(int roomNum)
         {
@@ -19,6 +20,12 @@ namespace DesignPatternsFinal
         {
             this.roomNum = roomNum;
             this.t = e;
+        }
+        public Room(int roomNum, Event e, String des)
+        {
+            this.roomNum = roomNum;
+            this.t = e;
+            this.description = des;
         }
         public void arrive()
         {
@@ -33,6 +40,10 @@ namespace DesignPatternsFinal
         public String toString()
         {
             return "room #" + roomNum;
+        }
+        public String getDes()
+        {
+            return description;
         }
     }
 }

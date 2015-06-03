@@ -9,15 +9,15 @@ namespace DesignPatternsFinal
     public class NavigationState : State
     {
         private static NavigationState _navigationState;
-        private System.Windows.Forms.Form NavigationForm;
-        private static World theWorld;
-        private NavigationState(ref World d)
+        private static System.Windows.Forms.Form NavigationForm;
+
+        private NavigationState(World d) : base(d)
         {
-            theWorld = d;
             NavigationForm = new NavigationViewForm(ref d);
-            base.navigationState = _navigationState;
+            _navigationState = this;
+            navigationState = _navigationState;
         }
-        override protected void toNavigate()
+        new public void toNavigate()
         {
             
         }
@@ -26,10 +26,10 @@ namespace DesignPatternsFinal
             return NavigationForm;
         }
 
-        public static State initNavigationState(ref World d)
+        public static State initNavigationState(World d)
         {
             if (_navigationState == null)
-                _navigationState = new NavigationState(ref d);
+                _navigationState = new NavigationState(d);
             return _navigationState;
         }
     }

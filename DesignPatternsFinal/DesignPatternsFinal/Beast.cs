@@ -30,9 +30,11 @@ namespace DesignPatternsFinal
             Random rand = new Random();
             double choice = rand.NextDouble();
             if (choice > .75)
-                return this.defend();
+                return this.moves[(int)MOVES.DEFEND].ability(ref enemies);
+            //return this.defend();
             else
-                return this.attack(enemies);
+                return this.moves[(int)MOVES.ATTACK].ability(ref enemies);
+                //return this.attack(enemies);
         }
 
         override

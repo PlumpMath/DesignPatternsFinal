@@ -42,6 +42,7 @@ namespace DesignPatternsFinal
                 this.actionBox.Controls.Add(theButton);
                 x++;
             }
+            actionLabel.Text = "What should " + current.Name + " do?";
         }
     }
 }

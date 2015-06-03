@@ -10,7 +10,7 @@ namespace DesignPatternsFinal
     {
         private Character owner;
 
-        public Attack( ref Character own)
+        public Attack(Character own)
         {
             owner = own;
         }

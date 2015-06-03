@@ -8,24 +8,20 @@ namespace DesignPatternsFinal
 {
     public class BattleState : State
     {
-        private World theWorld;
         private static BattleState _battleState;
-        private System.Windows.Forms.Form BattleForm;
+        private static System.Windows.Forms.Form BattleForm;
 
-        private BattleState(ref World world)
+        public BattleState()
         {
-            theWorld = world;
-            BattleForm = new BattleViewForm();
-            base.battleState = _battleState;
-        }
-        public static BattleState initBattleState(ref World world)
-        {
-            if(_battleState == null)
-                _battleState = new BattleState(ref world);
-            return _battleState;
+            if ((_battleState==null))
+            {
+                BattleForm = new BattleViewForm();
+                _battleState = this;
+                battleState = _battleState;
+            }
         }
 
-        override protected void toBattle(){ }
+        new public void toBattle(){ }
         override public System.Windows.Forms.Form StateView()
         {
             return BattleForm;

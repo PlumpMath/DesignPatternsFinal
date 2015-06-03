@@ -9,14 +9,18 @@ namespace DesignPatternsFinal
     public class InventoryState : State
     {
         private static InventoryState _inventoryState;
-        private System.Windows.Forms.Form InventoryForm;
+        private static System.Windows.Forms.Form InventoryForm;
 
-        private InventoryState()
+        public InventoryState()
         {
-            InventoryForm = new InventoryViewForm();
-            base.inventoryState = _inventoryState;
+            if (_inventoryState == null)
+            {
+                InventoryForm = new InventoryViewForm();
+                _inventoryState = this;
+                inventoryState = _inventoryState;
+            }
         }
-        override protected void toInventory()
+        new public void toInventory()
         {
             
         }

@@ -29,7 +29,6 @@ namespace DesignPatternsFinal
         {
             if (index < this.size() && index >= 0)
                 return party[index] ;
-            //Console.WriteLine( "No character at this location." );
             throw new IndexOutOfRangeException("No character at this location.");
         }
 
@@ -39,7 +38,6 @@ namespace DesignPatternsFinal
                 party.RemoveAt(index);
             else
             {
-                //Console.WriteLine("No character at this location.");
                 throw new IndexOutOfRangeException("No character at this location.");
             }
         }
