@@ -7,8 +7,8 @@ namespace DesignPatternsFinal
         public Hades()
         {
             Name = "Hades";
-            HP = 13;
-            maxHP = 13;
+            HP = 130;
+            maxHP = 130;
             Str = 14;
             Dex = 16;
             Mag = 19;

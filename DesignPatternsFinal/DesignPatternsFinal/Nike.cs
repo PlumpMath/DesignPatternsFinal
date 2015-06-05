@@ -7,8 +7,8 @@ namespace DesignPatternsFinal
         public Nike()
         {
             Name = "Nike";
-            HP = 15;
-            maxHP = 15;
+            HP = 150;
+            maxHP = 150;
             Str = 14;
             Dex = 20;
             Mag = 13;

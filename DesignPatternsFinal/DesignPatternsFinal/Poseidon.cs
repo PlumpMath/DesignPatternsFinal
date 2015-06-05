@@ -7,8 +7,8 @@ namespace DesignPatternsFinal
         public Poseidon()
         {
             Name="Poseidon";
-            HP = 11;
-            maxHP = 11;
+            HP = 100;
+            maxHP = 100;
             Str = 12;
             Dex = 14;
             Mag = 18;

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatternsFinal
 {
@@ -11,9 +7,9 @@ namespace DesignPatternsFinal
         public Hydra()
         {
             Name = "Hydra";
-            HP = 14;
-            maxHP = 14;
-            Str = 7;
+            HP = 200;
+            maxHP = 200;
+            Str = 9;
             Dex = 20;
             Mag = 18;
             Con = 11;

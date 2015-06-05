@@ -7,7 +7,8 @@ namespace DesignPatternsFinal
         public Nemesis()
         {
             Name = "Nemesis";
-            HP = 15;
+            HP = 145;
+            maxHP = 145;
             Str = 17;
             Dex = 20;
             Mag = 16;

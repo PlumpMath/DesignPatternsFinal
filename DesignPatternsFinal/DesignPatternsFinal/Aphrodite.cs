@@ -7,8 +7,8 @@ namespace DesignPatternsFinal
         public Aphrodite()
         {
             Name = "Aphrodite";
-            HP = 10;
-            maxHP = 10;
+            HP = 105;
+            maxHP = 105;
             Str = 9;
             Dex = 12;
             Mag = 22;

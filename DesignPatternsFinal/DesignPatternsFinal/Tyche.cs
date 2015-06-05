@@ -7,8 +7,8 @@ namespace DesignPatternsFinal
         public Tyche()
         {
             Name = "Tyche";
-            HP = 12;
-            maxHP = 12;
+            HP = 110;
+            maxHP = 110;
             Str = 13;
             Dex = 16;
             Mag = 16;

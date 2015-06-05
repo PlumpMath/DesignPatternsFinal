@@ -7,8 +7,8 @@ namespace DesignPatternsFinal
         public Ares()
         {
             Name = "Ares";
-            HP = 20;
-            maxHP = 20;
+            HP = 185;
+            maxHP = 185;
             Str = 20;
             Dex = 13;
             Mag = 9;

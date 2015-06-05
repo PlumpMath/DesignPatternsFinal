@@ -7,8 +7,8 @@ namespace DesignPatternsFinal
         public Zeus()
         {
             Name = "Zeus";
-            HP = 15;
-            maxHP = 15;
+            HP = 120;
+            maxHP = 120;
             Str = 16;
             Dex = 12;
             Mag = 14;
