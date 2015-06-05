@@ -12,6 +12,7 @@ namespace DesignPatternsFinal
         {
             Name = "Hydra";
             HP = 14;
+            maxHP = 14;
             Str = 7;
             Dex = 20;
             Mag = 18;

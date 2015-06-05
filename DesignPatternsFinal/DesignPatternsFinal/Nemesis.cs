@@ -2,24 +2,23 @@
 
 namespace DesignPatternsFinal
 {
-    public class Poseidon : God
+    public class Nemesis : God
     {
-        public Poseidon()
+        public Nemesis()
         {
-            Name="Poseidon";
-            HP = 11;
-            maxHP = 11;
-            Str = 12;
-            Dex = 14;
-            Mag = 18;
-            Con = 11;
-            Wis = 16;
-            Cha = 15;
+            Name = "Nemesis";
+            HP = 15;
+            Str = 17;
+            Dex = 20;
+            Mag = 16;
+            Con = 15;
+            Wis = 13;
+            Cha = 12;
             Stance = 1.0;
 
             //starting armor
             //starting weapon
-            special = new GreatWave(); 
+            special = new InstantKill();
         }
 
         override
@@ -27,6 +26,6 @@ namespace DesignPatternsFinal
         {
             this.special.ability(enemies);
             this.Stance = 1.0;
-         }
+        }
     }
 }

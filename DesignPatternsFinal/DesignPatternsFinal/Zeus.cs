@@ -2,24 +2,24 @@
 
 namespace DesignPatternsFinal
 {
-    public class Poseidon : God
+    public class Zeus : God
     {
-        public Poseidon()
+        public Zeus()
         {
-            Name="Poseidon";
-            HP = 11;
-            maxHP = 11;
-            Str = 12;
-            Dex = 14;
-            Mag = 18;
-            Con = 11;
-            Wis = 16;
-            Cha = 15;
+            Name = "Zeus";
+            HP = 15;
+            maxHP = 15;
+            Str = 16;
+            Dex = 12;
+            Mag = 14;
+            Con = 14;
+            Wis = 17;
+            Cha = 18;
             Stance = 1.0;
 
             //starting armor
             //starting weapon
-            special = new GreatWave(); 
+            special = new LightningStrike(); 
         }
 
         override
@@ -27,6 +27,6 @@ namespace DesignPatternsFinal
         {
             this.special.ability(enemies);
             this.Stance = 1.0;
-         }
+        }
     }
 }

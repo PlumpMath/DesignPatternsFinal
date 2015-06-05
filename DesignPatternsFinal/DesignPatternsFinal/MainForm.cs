@@ -30,14 +30,10 @@ namespace DesignPatternsFinal
         private void button1_Click(object sender, EventArgs e)
         {
             God hero1 = new Poseidon();
-            God hero2 = new Poseidon();
-            hero2.Name = "Bob";
-            God hero3 = new Poseidon();
-            hero3.Name = "Sam";
-            God hero4 = new Poseidon();
-            hero4.Name = "Bilbo";
-            God hero5 = new Poseidon();
-            hero5.Name = "Frodo";
+            God hero2 = new Zeus();
+            God hero3 = new Ares();
+            God hero4 = new Hades();
+            God hero5 = new Nike();
 
             Party heroParty = new Party();
             Dictionary<String, God> hero_list = new Dictionary<String, God>();

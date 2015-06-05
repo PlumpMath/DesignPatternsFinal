@@ -22,7 +22,7 @@ namespace DesignPatternsFinal
             foreach (Character enemy in party)
             {
                 int oldHP = enemy.HP;
-                double damage = (50 - enemy.Con) * enemy.Stance;
+                double damage = (30 - enemy.Con) * enemy.Stance;
                 double newHP = oldHP - damage;
                 enemy.HP = ((int)newHP);
 

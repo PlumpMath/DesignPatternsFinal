@@ -9,6 +9,8 @@ namespace DesignPatternsFinal
         public String Name { get { return name; } set { name = value; } }
         private int hp;
         public int HP { get { return hp; } set { hp = value; } }
+        private int maxHp;
+        public int maxHP { get { return maxHp; } set { maxHp = value; } }
         private int strength;
         public int Str { get { return strength; } set { strength = value; } }
         private int dexterity;
