@@ -1,8 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatternsFinal
 {
@@ -15,7 +12,7 @@ namespace DesignPatternsFinal
 			Party party = new Party ();
             int roomNum = room.getRoomNum();
 
-			if (roomNum > 31) 
+			if (roomNum < 31) 
 			{
 				if (choice < .33) 
 				{
@@ -33,13 +30,13 @@ namespace DesignPatternsFinal
 					party.addCharacter (new Siren ());
 				}
 			} 
-			else 
+			else if (roomNum > 31 || roomNum < 54) 
 			{
 				if (choice < .33) 
 				{
-                    party.addCharacter(new Gorgon());
-                    party.addCharacter(new Gorgon());
-                    party.addCharacter(new Gorgon());
+					party.addCharacter (new Gorgon ());
+					party.addCharacter (new Gorgon ());
+					party.addCharacter (new Gorgon ());
 				} 
 				else if (choice < .66) 
 				{
@@ -51,6 +48,17 @@ namespace DesignPatternsFinal
 					party.addCharacter (new Chimera ());
 					party.addCharacter (new Chimera ());
 					party.addCharacter (new Chimera ());
+				}
+			} 
+			else 
+			{
+				if (roomNum == 31 && !Cerberus.isDefeated()) 
+				{
+					party.addCharacter (Cerberus.getCerberus());
+				} 
+				else if (roomNum == 54 && !Medusa.isDefeated())
+				{
+					party.addCharacter (Medusa.getMedusa()); 
 				}
 			}
 

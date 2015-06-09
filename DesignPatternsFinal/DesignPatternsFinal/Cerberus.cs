@@ -8,7 +8,10 @@ namespace DesignPatternsFinal
 {
     class Cerberus : Beast
     {
-        public Cerberus()
+		private static boolean defeated;
+		private static Cerberus it;
+
+        private Cerberus()
         {
             Name = "Cerberus";
             HP = 1000;
@@ -20,7 +23,26 @@ namespace DesignPatternsFinal
             Wis = 13;
             Cha = 10;
             Stance = 1.0;
+			defeated = false;
         }
+
+		public static Cerberus getCerberus()
+		{
+			if( it == null )
+				it = new Cerberus();
+			return it;
+		}
+
+		public Boolean isDefeated()
+		{
+			return defeated;
+		}
+
+		override
+		public Item defeat()
+		{	
+			defeated = true;
+		}
     }
 }
 

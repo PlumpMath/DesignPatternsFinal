@@ -8,6 +8,9 @@ namespace DesignPatternsFinal
 {
     class Medusa : Beast
     {
+		private static boolean defeated;
+		private static Medusa it;
+
         public Medusa()
         {
             Name = "Medusa";
@@ -20,6 +23,26 @@ namespace DesignPatternsFinal
             Wis = 17;
             Cha = 15;
             Stance = 1.0;
+			defeated = false;
         }
+
+		public static Medusa getMedusa()
+		{
+			if( it == null )
+				it = new Medusa();
+			return it;
+		}
+
+		public Boolean isDefeated()
+		{
+			return defeated;
+		}
+
+		override
+		public Item defeat()
+		{	
+			defeated = true;
+			return null;
+		}
     }
 }

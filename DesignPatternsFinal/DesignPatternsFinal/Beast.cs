@@ -31,5 +31,17 @@ namespace DesignPatternsFinal
             int choice = rand.Next(enemy.size());
             return enemy.getCharacter(choice);
         }
-    }
+
+		override
+		public Item defeat()
+		{
+			Random rand = new Random ();
+			double selection = rand.NextDouble ();
+			if (selection > .6) 
+			{
+				//generate random weapon
+			}
+			return null;
+		}
+	}
 }
