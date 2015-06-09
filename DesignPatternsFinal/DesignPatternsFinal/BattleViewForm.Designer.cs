@@ -29,27 +29,18 @@
         private void InitializeComponent()
         {
             this.badguyBox = new System.Windows.Forms.GroupBox();
-            this.battleOutput = new System.Windows.Forms.Label();
             this.Return = new System.Windows.Forms.Button();
+            this.battleOutput = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // badguyBox
             // 
             this.badguyBox.Location = new System.Drawing.Point(8, 24);
             this.badguyBox.Name = "badguyBox";
-            this.badguyBox.Size = new System.Drawing.Size(256, 126);
+            this.badguyBox.Size = new System.Drawing.Size(256, 100);
             this.badguyBox.TabIndex = 0;
             this.badguyBox.TabStop = false;
             this.badguyBox.Text = "Enemies";
-            // 
-            // battleOutput
-            // 
-            this.battleOutput.AutoSize = true;
-            this.battleOutput.Location = new System.Drawing.Point(15, 157);
-            this.battleOutput.Name = "battleOutput";
-            this.battleOutput.Size = new System.Drawing.Size(35, 13);
-            this.battleOutput.TabIndex = 1;
-            this.battleOutput.Text = "label1";
             // 
             // Return
             // 
@@ -62,13 +53,22 @@
             this.Return.Visible = false;
             this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
+            // battleOutput
+            // 
+            this.battleOutput.Location = new System.Drawing.Point(8, 130);
+            this.battleOutput.Multiline = true;
+            this.battleOutput.Name = "battleOutput";
+            this.battleOutput.ReadOnly = true;
+            this.battleOutput.Size = new System.Drawing.Size(256, 90);
+            this.battleOutput.TabIndex = 3;
+            // 
             // BattleViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.Return);
             this.Controls.Add(this.battleOutput);
+            this.Controls.Add(this.Return);
             this.Controls.Add(this.badguyBox);
             this.Name = "BattleViewForm";
             this.Text = "BattleViewForm";
@@ -80,7 +80,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox badguyBox;
-        private System.Windows.Forms.Label battleOutput;
         private System.Windows.Forms.Button Return;
+        private System.Windows.Forms.TextBox battleOutput;
     }
 }

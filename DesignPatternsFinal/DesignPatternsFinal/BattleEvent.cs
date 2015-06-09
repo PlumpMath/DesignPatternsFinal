@@ -16,9 +16,16 @@ namespace DesignPatternsFinal
             a = mon;
             b = new Battle(ref h, ref a);
         }
-        public void onTrigger()
+        public void onTrigger(int roomNum)
         {
-            State.toBattle(this);
+			Random rand = new Random ();
+			double selection = rand.NextDouble ();
+			if (selection > .67) 
+			{
+				a = RandomEnemyGenerator.getEnemies (roomNum);
+				b.setAway (a);
+				State.toBattle (this);
+			}
         }
         public Party getFoes()
         {

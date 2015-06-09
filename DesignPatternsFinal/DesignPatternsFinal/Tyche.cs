@@ -19,14 +19,15 @@ namespace DesignPatternsFinal
 
             //starting armor
             //starting weapon
-            special = new GambleHeal();
+            //special = new GambleHeal();
+            moves.Add(new GambleHeal());
         }
-
+        /*
         override
         public void specialAbility(Party team, Party enemies)
         {
             this.special.ability(team);
             this.Stance = 1.0;
-        }
+        }*/
     }
 }

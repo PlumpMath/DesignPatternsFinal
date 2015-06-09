@@ -19,14 +19,15 @@ namespace DesignPatternsFinal
 
             //starting armor
             //starting weapon
-            special = new LightningStrike(); 
+            //special = new LightningStrike();
+            moves.Add(new LightningStrike());
         }
-
+        /*
         override
         public void specialAbility(Party team, Party enemies)
         {
             this.special.ability(enemies);
             this.Stance = 1.0;
-        }
+        }*/
     }
 }

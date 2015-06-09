@@ -4,9 +4,9 @@ namespace DesignPatternsFinal
 {
     public abstract class God : Character
     {
-        protected IAbility special;
+        //protected IAbility special;
 
-        public abstract void specialAbility(Party team, Party enemies);
+        //public abstract void specialAbility(Party team, Party enemies);
 
         override
         public IAbility turn(Party team, Party enemies )

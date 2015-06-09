@@ -35,6 +35,9 @@ namespace DesignPatternsFinal
             God hero3 = new Ares();
             God hero4 = new Hades();
             God hero5 = new Nike();
+            God hero6 = new Nemesis();
+            God hero7 = new Tyche();
+            God hero8 = new Aphrodite();
 
             Party heroParty = new Party();
             Dictionary<String, God> hero_list = new Dictionary<String, God>();
@@ -43,6 +46,9 @@ namespace DesignPatternsFinal
             hero_list.Add(hero3.Name, hero3);
             hero_list.Add(hero4.Name, hero4);
             hero_list.Add(hero5.Name, hero5);
+            hero_list.Add(hero6.Name, hero6);
+            hero_list.Add(hero7.Name, hero7);
+            hero_list.Add(hero8.Name, hero8);
             NewGameForm newGame = new NewGameForm(ref heroParty, ref hero_list);
             InventoryState newInventory = new InventoryState();
             inventory = newInventory.getInventory();

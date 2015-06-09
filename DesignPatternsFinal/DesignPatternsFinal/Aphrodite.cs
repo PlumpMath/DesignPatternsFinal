@@ -19,14 +19,15 @@ namespace DesignPatternsFinal
 
             //starting armor
             //starting weapon
-            special = new TeamHeal() ;
+            //special = new TeamHeal() ;
+            moves.Add(new TeamHeal());
         }
-
+        /*
         override
         public void specialAbility(Party team, Party enemies)
         {
             this.special.ability(team);
             this.Stance = 1.0;
-        }
+        }*/
     }
 }
