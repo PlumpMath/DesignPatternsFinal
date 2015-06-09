@@ -46,7 +46,13 @@ namespace DesignPatternsFinal
         {
             return party.Count;
         }
-
+		public bool isEmpty()
+		{
+			if (size () == 0)
+				return true;
+			else
+				return false;
+		}
         IEnumerator<Character> IEnumerable<Character>.GetEnumerator()
         {
             return party.GetEnumerator();
