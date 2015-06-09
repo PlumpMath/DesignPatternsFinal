@@ -16,6 +16,11 @@ namespace DesignPatternsFinal
         {
             this.roomNum = roomNum;
         }
+		public Room(int roomNum, String desc)
+		{
+			this.roomNum = roomNum;
+			this.description = desc;
+		}
         public Room(int roomNum, Event e)
         {
             this.roomNum = roomNum;

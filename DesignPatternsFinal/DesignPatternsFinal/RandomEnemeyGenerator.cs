@@ -5,12 +5,11 @@ namespace DesignPatternsFinal
 {
 	class RandomEnemyGenerator
 	{
-		public static Party getEnemies( Room room )
+		public static Party getEnemies( int roomNum )
 		{
 			Random rand = new Random();
 			double choice = rand.NextDouble ();
 			Party party = new Party ();
-            int roomNum = room.getRoomNum();
 
 			if (roomNum < 31) 
 			{

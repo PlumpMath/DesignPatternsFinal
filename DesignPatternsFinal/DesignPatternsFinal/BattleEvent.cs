@@ -10,11 +10,11 @@ namespace DesignPatternsFinal
         private Battle b;
         private Party h;
         private Party a;
+
         public BattleEvent(Party her, Party mon)
         {
             h = her;
             a = mon;
-            b = new Battle(ref h, ref a);
         }
         public void onTrigger(int roomNum)
         {
@@ -23,8 +23,11 @@ namespace DesignPatternsFinal
 			if (selection > .67) 
 			{
 				a = RandomEnemyGenerator.getEnemies (roomNum);
-				b.setAway (a);
-				State.toBattle (this);
+				if (!a.isEmpty ()) 
+				{
+					b = new BattleEvent (h, a);
+					State.toBattle (this);
+				}
 			}
         }
         public Party getFoes()
