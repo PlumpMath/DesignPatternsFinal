@@ -72,14 +72,14 @@ namespace DesignPatternsFinal
             }
             if (home.size() == 0)
             {
-                response += ("You lost...");
+                response += ("You lost...\n");
                 this.fighting = false;
             }
             else if (away.size() == 0)
             {
+                response += ("You won!\n");
 				foreach (Character him in home)
-					him.levelUp ();
-                response += ("You won!");
+					response += him.levelUp ();
                 this.fighting = false;
             }
             return response;
