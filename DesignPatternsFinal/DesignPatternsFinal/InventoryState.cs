@@ -16,7 +16,7 @@ namespace DesignPatternsFinal
         {
             if (_inventoryState == null)
             {
-                InventoryForm = new InventoryViewForm();
+                InventoryForm = new InventoryViewForm(null);
                 _inventoryState = this;
                 inventoryState = _inventoryState;
                 inventory = new Inventory();

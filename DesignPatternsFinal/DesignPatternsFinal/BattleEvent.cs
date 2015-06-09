@@ -24,7 +24,7 @@ namespace DesignPatternsFinal
         {
             return a;
         }
-        public Battle startFight()
+        public Battle theFight()
         {
             return b;
         }

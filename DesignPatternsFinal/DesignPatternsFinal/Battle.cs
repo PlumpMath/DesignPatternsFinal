@@ -7,11 +7,21 @@ namespace DesignPatternsFinal
     {
         private Party home;
         private Party away;
-
+        private List<int> speed;// = new List<int>() ;
+        private bool fighting;
+           
         public Battle(ref Party home, ref Party away)
         {
+            fighting = true;
             this.home = home;
             this.away = away;
+            
+            speed = new List<int>();
+
+            foreach (Character person in home)
+                speed.Add(person.Dex);
+            foreach (Character person in away)
+                speed.Add(person.Dex);
         }
 
         public void setHome(Party home)
@@ -23,15 +33,57 @@ namespace DesignPatternsFinal
         {
             this.away = away;
         }
-        public String battle()
+        public String turn()
         {
-            List<int> speed = new List<int>() ;
+            String response = "";
+            for (int i = 0; i < home.size(); i++)
+            {
+                if (speed[i] != 0)
+                    speed[i]--;
+                else
+                {
+                    if (away.size() > 0)
+                    {
+                        IAbility action;
+                        action = home.getCharacter(i).turn(home, away);
+                        response += action.ability(away);
+                        speed[i] = home.getCharacter(i).Dex;
+                        response += killed(speed);
+                    }
+                }
+                ((BattleViewForm)(State.currentStateView())).refreshView();
+            }
 
-            foreach( Character person in home )
-                speed.Add(person.Dex);
-            foreach (Character person in away)
-                speed.Add(person.Dex);
-
+            for (int i = 0; i < away.size(); i++)
+            {
+                int ix = i + home.size();
+                if (speed[ix] != 0)
+                    speed[ix]--;
+                else
+                {
+                    if (home.size() > 0)
+                    {
+                        away.getCharacter(i).turn(away, home);
+                        speed[ix] = home.getCharacter(i).Dex;
+                        response += killed(speed);
+                    }
+                }
+                ((BattleViewForm)(State.currentStateView())).refreshView();
+            }
+            if (home.size() == 0)
+            {
+                response += ("You lost...");
+                this.fighting = false;
+            }
+            else if (away.size() == 0)
+            {
+                response += ("You won!");
+                this.fighting = false;
+            }
+            return response;
+        }
+        /*public String battle()
+        {
             while (home.size() > 0 && away.size() > 0)
             {
                 for (int i = 0; i < home.size(); i++)
@@ -49,6 +101,7 @@ namespace DesignPatternsFinal
                             killed(speed);
                         }
                     }
+                    ((BattleViewForm)(State.currentStateView())).refreshView();
                 }
 
                 for (int i = 0; i < away.size(); i++)
@@ -65,6 +118,7 @@ namespace DesignPatternsFinal
                             killed(speed);
                         }
                     }
+                    ((BattleViewForm)(State.currentStateView())).refreshView();
                 }
             }
             String response = ("The battle is over.\n");
@@ -72,7 +126,7 @@ namespace DesignPatternsFinal
                 return response + ("You lost...");
             else
                 return response + ("You won!");
-        }
+        }*/
 
         private string killed( List<int> speed )
         {
@@ -104,6 +158,10 @@ namespace DesignPatternsFinal
                 }
             }
             return response;
+        }
+        public bool stillFighting()
+        {
+            return fighting;
         }
     }
 }

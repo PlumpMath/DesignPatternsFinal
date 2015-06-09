@@ -15,15 +15,19 @@ namespace DesignPatternsFinal
         private Character owner;
         public InventoryViewForm(List<Item> obj)
         {
+
             InitializeComponent();
-            int x = 0;
-            foreach (List<Item> p in obj)
+            if (obj != null)
             {
-                CheckBox check = new CheckBox();
-                //check.Text = p.Name;
-                check.Location = new System.Drawing.Point(0, 22 * x);
-                this.InventoryCheckBox.Controls.Add(check);
-                x++;
+                int x = 0;
+                foreach (Item p in obj)
+                {
+                    CheckBox check = new CheckBox();
+                    //check.Text = p.Name;
+                    check.Location = new System.Drawing.Point(0, 22 * x);
+                    this.InventoryCheckBox.Controls.Add(check);
+                    x++;
+                }
             }
             this.Update();
             this.Show();

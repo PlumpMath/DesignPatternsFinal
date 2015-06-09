@@ -23,13 +23,6 @@ namespace DesignPatternsFinal
             choice.ShowDialog();
             return choice.getDecision();
         }
-
-		override
-		public Item defeat()
-		{
-			//stubbed out
-		}
-
         override
         public string ToString()
         {

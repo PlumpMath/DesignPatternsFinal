@@ -16,6 +16,7 @@ namespace DesignPatternsFinal
         public BattleViewForm()
         {
             InitializeComponent();
+            Return.Visible = false;
         }
         public void newBattle(BattleEvent theEvent)
         { 
@@ -25,15 +26,39 @@ namespace DesignPatternsFinal
             foreach (Character c in enemies)
             {
                 Label cname = new Label();
-                cname.Text = c.Name + "\t HP: " + c.HP;
+                cname.Text = c.Name + "\t HP: " + c.HP + "/" + c.maxHP;
                 cname.Location = new System.Drawing.Point(0, 22 * i);
                 this.badguyBox.Controls.Add(cname);
                 i++;
             }
-            battleOutput.Text = theEvent.startFight().battle();
+            //battleOutput.Text = theEvent.theFight().battle();
+            while(theEvent.theFight().stillFighting())
+            {
+                battleOutput.Text = theEvent.theFight().turn();
+            }
+            Return.Visible = true;
             this.Update();
             this.Show();
         }
+        public void refreshView()
+        {
+            int i = 0;
 
+            foreach (Character c in enemies)
+            {
+                Label cname = new Label();
+                cname.Text = c.Name + "\t HP: " + c.HP + "/" + c.maxHP;
+                cname.Location = new System.Drawing.Point(0, 22 * i);
+                this.badguyBox.Controls.Add(cname);
+                i++;
+            }
+            this.Update();
+        }
+
+        private void Return_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            State.toNavigate();
+        }
     }
 }

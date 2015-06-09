@@ -52,7 +52,7 @@ namespace DesignPatternsFinal
             currentForm = currentState.StateView();
             currentForm.Show();
         }
-        public static void toNavigate(Event e)
+        public static void toNavigate(Event e = null)
         {
             currentForm.Hide();
             currentState = navigationState;
@@ -75,6 +75,10 @@ namespace DesignPatternsFinal
             _currentState = NavigationState.initNavigationState(d);
             currentForm = _currentState.StateView();
             return _currentState;
+        }
+        public static Form currentStateView()
+        {
+            return currentForm;
         }
     }
 }
