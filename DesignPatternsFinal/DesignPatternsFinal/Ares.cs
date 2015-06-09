@@ -19,14 +19,15 @@ namespace DesignPatternsFinal
 
             //starting armor
             //starting weapon
-            special = new SpearThrow();
+            //special = new SpearThrow();
+            moves.Add(new SpearThrow());
         }
-
+        /*
         override
         public void specialAbility(Party team, Party enemies)
         {
             this.special.ability(enemies);
             this.Stance = 1.0;
-        }
+        }*/
     }
 }

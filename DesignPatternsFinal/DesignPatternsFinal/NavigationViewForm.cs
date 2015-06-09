@@ -26,7 +26,7 @@ namespace DesignPatternsFinal
             foreach (Room r in theWorld.theDungeon.adjacent())
             {
                 Button theButton = new Button();
-                theButton.Text = "To room # " + r.getRoomNum();
+                theButton.Text = r.getDes();
                 theButton.Location = new System.Drawing.Point(0, 22 * x);
                 theButton.Click += delegate
                 {
@@ -37,6 +37,7 @@ namespace DesignPatternsFinal
                 this.navigationControl.Controls.Add(theButton);
                 x++;
             }
+            RoomPanel.Text = _dungeon.getCurrent().getDes();
         }
 
         private void repopulate()
@@ -46,7 +47,7 @@ namespace DesignPatternsFinal
             foreach (Room r in _dungeon.adjacent())
             {
                 Button theButton = new Button();
-                theButton.Text = "To room # " + r.getRoomNum();
+                theButton.Text = r.getDes();
                 theButton.Location = new System.Drawing.Point(0, 22 * x);
                 theButton.Width = 150;
                 theButton.Click += delegate

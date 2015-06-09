@@ -21,7 +21,7 @@ namespace DesignPatternsFinal
         public void refreshEnemies()
         {
             int i = 0;
-            
+            this.badguyBox.Controls.Clear();
             foreach (Character c in enemies)
             {
                 Label cname = new Label();
@@ -35,8 +35,7 @@ namespace DesignPatternsFinal
         public void newBattle(BattleEvent theEvent)
         { 
             enemies = theEvent.getFoes();
-            
-            //battleOutput.Text = theEvent.theFight().battle();
+           
             while(theEvent.theFight().stillFighting())
             {
                 refreshEnemies();
@@ -50,7 +49,6 @@ namespace DesignPatternsFinal
         public void refreshView()
         {
             int i = 0;
-
             foreach (Character c in enemies)
             {
                 Label cname = new Label();

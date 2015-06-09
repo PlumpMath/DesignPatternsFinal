@@ -19,14 +19,15 @@ namespace DesignPatternsFinal
 
             //starting armor
             //starting weapon
-            special = new PumpUp();
+            //special = new PumpUp();
+            moves.Add(new PumpUp());
         }
-
+        /*
         override
         public void specialAbility(Party team, Party enemies)
         {
             this.special.ability(team);
             this.Stance = 1.0;
-        }
+        }*/
     }
 }
