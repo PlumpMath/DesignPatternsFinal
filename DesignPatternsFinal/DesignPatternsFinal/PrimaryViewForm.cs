@@ -13,6 +13,7 @@ namespace DesignPatternsFinal
     public partial class PrimaryViewForm : Form
     {
         private static World theWorld;
+        private static PrimaryViewForm thisPtr;
 
         public PrimaryViewForm(World world)
         {
@@ -29,6 +30,22 @@ namespace DesignPatternsFinal
             }
             this.Update();
             this.Show();
+            thisPtr = this;
+        }
+        public static void onUpdate()
+        {
+            int i=0;
+            thisPtr.partyBox.Controls.Clear();
+
+            foreach(Character c in theWorld.heroParty)
+            {
+                Label cname = new Label();
+                cname.Text = c.Name + "\t HP: " + c.HP + "/" + c.maxHP;
+                cname.Location = new System.Drawing.Point(0, 22 * i);
+                thisPtr.partyBox.Controls.Add(cname);
+                i++;
+            }
+            thisPtr.Update();
         }
     }
 }

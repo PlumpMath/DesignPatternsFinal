@@ -41,6 +41,7 @@ namespace DesignPatternsFinal
                 refreshEnemies();
                 battleOutput.Text = theEvent.theFight().turn() + "\n";
                 this.Update();
+                PrimaryViewForm.onUpdate();
             }
             Return.Visible = true;
             this.Update();
