@@ -77,6 +77,8 @@ namespace DesignPatternsFinal
             }
             else if (away.size() == 0)
             {
+				foreach (Character him in home)
+					him.levelUp ();
                 response += ("You won!");
                 this.fighting = false;
             }
@@ -138,6 +140,7 @@ namespace DesignPatternsFinal
                     Character test = home.getCharacter(i);
                     if( test.HP <= 0 )
                     {
+						test.defeat();
                         response += test.Name + " has been killed.\n";
                         speed.RemoveAt(i);
                         home.removeCharacter(i);
@@ -150,6 +153,7 @@ namespace DesignPatternsFinal
                     Character test = away.getCharacter(awayIx);
                     if (test.HP <= 0)
                     {
+						test.defeat ();
                         response += test.Name + " has been killed.\n";
                         speed.RemoveAt(i);
                         away.removeCharacter(awayIx);
