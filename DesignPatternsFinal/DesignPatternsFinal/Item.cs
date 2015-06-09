@@ -8,7 +8,7 @@ namespace DesignPatternsFinal
 {
     public abstract class Item
     {
-        public abstract string getName();
+        public abstract string getname();
         public abstract int getDamageMax();
         public abstract int getDamageMin();
         public abstract int getHealMax();

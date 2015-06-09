@@ -14,10 +14,10 @@ namespace DesignPatternsFinal
         {
             this.inventoryList = inventoryList;
         }
-
-        public List<Item> getList()
+        override
+        public List<Item> getList(List<Item> items)
         {
-            return inventoryList.getList();
+            return inventoryList.getList(items);
         }
     }
 }

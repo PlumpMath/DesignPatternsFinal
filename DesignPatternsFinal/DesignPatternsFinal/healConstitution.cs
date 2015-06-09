@@ -11,18 +11,50 @@ namespace DesignPatternsFinal
         public healConstitution()
         {
         }
-
-        public string getName()
+        override
+        public string getname()
         {
             return "Heal Constitution";
         }
+        override
         public int getHealMax()
         {
             return 5;
         }
+        override
         public int getHealMin()
         {
             return 1;
+        }
+        override
+        public int getPoisonMax()
+        {
+            return 0;
+        }
+        override
+        public int getPoisonMin()
+        {
+            return 0;
+        }
+        override
+        public int getBlockMax()
+        {
+            return 0;
+        }
+        override
+        public int getBlockMin()
+        {
+            return 0;
+        }
+        override
+        public int getDamageMax()
+        {
+            return 0;
+        }
+        override
+        public int getDamageMin()
+        {
+            return 0;
         }
     }
 }
