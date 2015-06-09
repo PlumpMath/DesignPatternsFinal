@@ -18,11 +18,10 @@ namespace DesignPatternsFinal
             InitializeComponent();
             Return.Visible = false;
         }
-        public void newBattle(BattleEvent theEvent)
-        { 
-            enemies = theEvent.getFoes();
+        public void refreshEnemies()
+        {
             int i = 0;
-
+            
             foreach (Character c in enemies)
             {
                 Label cname = new Label();
@@ -31,10 +30,18 @@ namespace DesignPatternsFinal
                 this.badguyBox.Controls.Add(cname);
                 i++;
             }
+            this.Update();
+        }
+        public void newBattle(BattleEvent theEvent)
+        { 
+            enemies = theEvent.getFoes();
+            
             //battleOutput.Text = theEvent.theFight().battle();
             while(theEvent.theFight().stillFighting())
             {
-                battleOutput.Text = theEvent.theFight().turn();
+                refreshEnemies();
+                battleOutput.Text = theEvent.theFight().turn() + "\n";
+                this.Update();
             }
             Return.Visible = true;
             this.Update();

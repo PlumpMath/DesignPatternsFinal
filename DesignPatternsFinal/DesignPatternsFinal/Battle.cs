@@ -84,51 +84,6 @@ namespace DesignPatternsFinal
             }
             return response;
         }
-        /*public String battle()
-        {
-            while (home.size() > 0 && away.size() > 0)
-            {
-                for (int i = 0; i < home.size(); i++)
-                {
-                    if (speed[i] != 0)
-                        speed[i]--;
-                    else
-                    {
-                        if (away.size() > 0)
-                        {
-                            IAbility action;
-                            action = home.getCharacter(i).turn(home, away);
-                            action.ability(away);
-                            speed[i] = home.getCharacter(i).Dex;
-                            killed(speed);
-                        }
-                    }
-                    ((BattleViewForm)(State.currentStateView())).refreshView();
-                }
-
-                for (int i = 0; i < away.size(); i++)
-                {
-                    int ix = i + home.size();
-                    if (speed[ix] != 0)
-                        speed[ix]--;
-                    else
-                    {
-                        if (home.size() > 0)
-                        {
-                            away.getCharacter(i).turn(away, home);
-                            speed[ix] = home.getCharacter(i).Dex;
-                            killed(speed);
-                        }
-                    }
-                    ((BattleViewForm)(State.currentStateView())).refreshView();
-                }
-            }
-            String response = ("The battle is over.\n");
-            if (home.size() == 0)
-                return response + ("You lost...");
-            else
-                return response + ("You won!");
-        }*/
 
         private string killed( List<int> speed )
         {

@@ -16,6 +16,7 @@ namespace DesignPatternsFinal
         private CheckedListBox checkedListBox1;
         private Button button1;
         private Dictionary<String, God> poolTemp;
+
         public NewGameForm(ref Party heros, ref Dictionary<String,God> pool)
         {
             heroTemp = heros;
@@ -56,9 +57,10 @@ namespace DesignPatternsFinal
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(12, 12);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(260, 169);
+            this.checkedListBox1.Size = new System.Drawing.Size(260, 199);
             this.checkedListBox1.TabIndex = 0;
             this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -86,6 +88,18 @@ namespace DesignPatternsFinal
             if (items.CheckedItems.Count > 2)
             {
                 e.NewValue = CheckState.Unchecked;
+                this.Update();
+            }
+            items.Update();
+            this.Update();
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CheckedListBox items = (CheckedListBox)sender;
+            if (items.CheckedItems.Count > 2)
+            {
+                //e.NewValue = CheckState.Unchecked;
                 this.Update();
             }
             items.Update();
