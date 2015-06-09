@@ -153,8 +153,10 @@ namespace DesignPatternsFinal
                     Character test = away.getCharacter(awayIx);
                     if (test.HP <= 0)
                     {
+						foreach (Character him in home)
+							him.XP += 25;
 						test.defeat ();
-                        response += test.Name + " has been killed.\n";
+                        response += test.Name + " has been killed. Everyone gains 25XP.\n";
                         speed.RemoveAt(i);
                         away.removeCharacter(awayIx);
                         i--;
