@@ -52,7 +52,6 @@
     </Compile>
     <Compile Include="Aphrodite.cs" />
     <Compile Include="Ares.cs" />
-    <Compile Include="ArmorItems.cs" />
     <Compile Include="Attack.cs" />
     <Compile Include="Axe.cs" />
     <Compile Include="Battle.cs" />
@@ -66,6 +65,7 @@
     </Compile>
     <Compile Include="Beast.cs" />
     <Compile Include="BowNArrow.cs" />
+    <Compile Include="Bracers.cs" />
     <Compile Include="Cerberus.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="Chimera.cs" />
@@ -76,15 +76,18 @@
     <Compile Include="CharacterSelectForm.Designer.cs">
       <DependentUpon>CharacterSelectForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Curiass.cs" />
     <Compile Include="Dagger.cs" />
     <Compile Include="Defend.cs" />
     <Compile Include="Dungeon.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="Fists.cs" />
     <Compile Include="GambleHeal.cs" />
+    <Compile Include="Gauntlets.cs" />
     <Compile Include="God.cs" />
     <Compile Include="Gorgon.cs" />
     <Compile Include="GreatWave.cs" />
+    <Compile Include="Greaves.cs" />
     <Compile Include="Griffin.cs" />
     <Compile Include="Hades.cs" />
     <Compile Include="healCharisma.cs" />
@@ -95,6 +98,7 @@
     <Compile Include="healStrength.cs" />
     <Compile Include="healWisdom.cs" />
     <Compile Include="HellFire.cs" />
+    <Compile Include="Helmet.cs" />
     <Compile Include="Hydra.cs" />
     <Compile Include="IAbility.cs" />
     <Compile Include="InstantKill.cs" />
@@ -107,7 +111,6 @@
       <DependentUpon>InventoryViewForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Item.cs" />
-    <Compile Include="IWeaponBehavior.cs" />
     <Compile Include="Javelin.cs" />
     <Compile Include="LightningStrike.cs" />
     <Compile Include="LongSword.cs" />
@@ -140,7 +143,13 @@
       <DependentUpon>NPCViewForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Party.cs" />
-    <Compile Include="PoisonItems.cs" />
+    <Compile Include="poisonHP.cs" />
+    <Compile Include="poisonMagic.cs" />
+    <Compile Include="poisonCharisma.cs" />
+    <Compile Include="poisonConstitution.cs" />
+    <Compile Include="poisonDexterity.cs" />
+    <Compile Include="poisonStrength.cs" />
+    <Compile Include="poisonWisdom.cs" />
     <Compile Include="Poseidon.cs" />
     <Compile Include="PrimaryViewForm.cs">
       <SubType>Form</SubType>
@@ -153,6 +162,7 @@
     <Compile Include="PumpUp.cs" />
     <Compile Include="RandomEnemeyGenerator.cs" />
     <Compile Include="Room.cs" />
+    <Compile Include="Sheild.cs" />
     <Compile Include="Siren.cs" />
     <Compile Include="SpearThrow.cs" />
     <Compile Include="Staff.cs" />

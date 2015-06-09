@@ -14,8 +14,17 @@ namespace DesignPatternsFinal
         public Inventory()
         {
             items = new List<Item>();
+            items.Add(new LongSword());
+            items.Add(new BowNArrow());
+            items.Add(new Dagger());
+            items.Add(new Helmet());
+            items.Add(new Curiass());
         }
 
+        public List<Item> getList()
+        {
+            return items;
+        }
 
         public string getName()
         {
