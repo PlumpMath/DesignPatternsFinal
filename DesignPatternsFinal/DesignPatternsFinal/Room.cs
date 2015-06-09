@@ -30,7 +30,7 @@ namespace DesignPatternsFinal
         public void arrive()
         {
             if(t!=null)
-                this.t.onTrigger();
+                this.t.onTrigger(roomNum);
         }
         public int getRoomNum()
         {

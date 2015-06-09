@@ -7,6 +7,6 @@ namespace DesignPatternsFinal
 {
     public interface Event
     {
-        void onTrigger();
+        void onTrigger(int roomNum);
     }
 }
