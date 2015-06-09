@@ -5,8 +5,8 @@ using System.Text;
 
 namespace ItemsProject
 {
-    class Character
+    interface IWeaponBehavior
     {
-
+        void weapon();
     }
 }

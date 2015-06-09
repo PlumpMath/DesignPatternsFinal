@@ -7,5 +7,29 @@ namespace ItemsProject
 {
     class RangedWeapons
     {
+        public RangedWeapons()
+        {
+
+        }
+
+        public void BowNArrow()
+        {
+
+        }
+
+        public void staff()
+        {
+
+        }
+
+        public void javelin()
+        {
+
+        }
+        
+        public void throwingKnife()
+        {
+
+        }
     }
 }
