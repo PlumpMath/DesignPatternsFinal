@@ -23,8 +23,11 @@ namespace DesignPatternsFinal
 			if (selection > .67) 
 			{
 				a = RandomEnemyGenerator.getEnemies (roomNum);
-				b = new BattleEvent (h, a);
-				State.toBattle (this);
+				if (!a.isEmpty ()) 
+				{
+					b = new BattleEvent (h, a);
+					State.toBattle (this);
+				}
 			}
         }
         public Party getFoes()
