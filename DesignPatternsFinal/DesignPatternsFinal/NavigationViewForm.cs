@@ -48,6 +48,7 @@ namespace DesignPatternsFinal
                 Button theButton = new Button();
                 theButton.Text = "To room # " + r.getRoomNum();
                 theButton.Location = new System.Drawing.Point(0, 22 * x);
+                theButton.Width = 150;
                 theButton.Click += delegate
                 {
                     _dungeon.moveTo(r);
@@ -58,6 +59,7 @@ namespace DesignPatternsFinal
                 this.navigationControl.Controls.Add(theButton);
                 x++;
             }
+            RoomPanel.Text = _dungeon.getCurrent().getDes();
         }
 
         private void NavigationViewForm_Load(object sender, EventArgs e)

@@ -27,14 +27,14 @@ namespace DesignPatternsFinal
         public double Stance { get { return stanceMultiplier; } set { stanceMultiplier = value; } }
 
         public System.Collections.Generic.List<IAbility> moves;
-        //private Armor armor;
-        //private Weapon weapon;
+        private ArmorItems armor;
+        private IWeaponBehavior weapon;
     
         public Character(){
             moves = new List<IAbility>();
             moves.Add(new Attack(this));
             moves.Add(new Defend(this));
-            moves.Add(new Item(this));
+            //moves.Add(new Item());
         }
         public enum MOVES
         {

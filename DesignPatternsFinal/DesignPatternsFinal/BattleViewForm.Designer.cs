@@ -30,6 +30,7 @@
         {
             this.badguyBox = new System.Windows.Forms.GroupBox();
             this.battleOutput = new System.Windows.Forms.Label();
+            this.Return = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // badguyBox
@@ -50,11 +51,23 @@
             this.battleOutput.TabIndex = 1;
             this.battleOutput.Text = "label1";
             // 
+            // Return
+            // 
+            this.Return.Location = new System.Drawing.Point(102, 226);
+            this.Return.Name = "Return";
+            this.Return.Size = new System.Drawing.Size(75, 23);
+            this.Return.TabIndex = 2;
+            this.Return.Text = "Return";
+            this.Return.UseVisualStyleBackColor = true;
+            this.Return.Visible = false;
+            this.Return.Click += new System.EventHandler(this.Return_Click);
+            // 
             // BattleViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.Return);
             this.Controls.Add(this.battleOutput);
             this.Controls.Add(this.badguyBox);
             this.Name = "BattleViewForm";
@@ -68,5 +81,6 @@
 
         private System.Windows.Forms.GroupBox badguyBox;
         private System.Windows.Forms.Label battleOutput;
+        private System.Windows.Forms.Button Return;
     }
 }

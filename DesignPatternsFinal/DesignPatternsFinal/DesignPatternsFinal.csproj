@@ -54,6 +54,7 @@
     <Compile Include="Ares.cs" />
     <Compile Include="ArmorItems.cs" />
     <Compile Include="Attack.cs" />
+    <Compile Include="Axe.cs" />
     <Compile Include="Battle.cs" />
     <Compile Include="BattleEvent.cs" />
     <Compile Include="BattleState.cs" />
@@ -64,6 +65,7 @@
       <DependentUpon>BattleViewForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Beast.cs" />
+    <Compile Include="BowNArrow.cs" />
     <Compile Include="Cerberus.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="Chimera.cs" />
@@ -74,16 +76,25 @@
     <Compile Include="CharacterSelectForm.Designer.cs">
       <DependentUpon>CharacterSelectForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dagger.cs" />
     <Compile Include="Defend.cs" />
     <Compile Include="Dungeon.cs" />
     <Compile Include="Event.cs" />
+    <Compile Include="Fists.cs" />
     <Compile Include="GambleHeal.cs" />
     <Compile Include="God.cs" />
     <Compile Include="Gorgon.cs" />
     <Compile Include="GreatWave.cs" />
     <Compile Include="Griffin.cs" />
     <Compile Include="Hades.cs" />
+    <Compile Include="healCharisma.cs" />
+    <Compile Include="healConstitution.cs" />
+    <Compile Include="healDexterity.cs" />
+    <Compile Include="healHP.cs" />
+    <Compile Include="healMagic.cs" />
+    <Compile Include="healStrength.cs" />
     <Compile Include="HealthItems.cs" />
+    <Compile Include="healWisdom.cs" />
     <Compile Include="HellFire.cs" />
     <Compile Include="Hydra.cs" />
     <Compile Include="IAbility.cs" />
@@ -98,7 +109,10 @@
     </Compile>
     <Compile Include="Item.cs" />
     <Compile Include="IWeaponBehavior.cs" />
+    <Compile Include="Javelin.cs" />
     <Compile Include="LightningStrike.cs" />
+    <Compile Include="LongSword.cs" />
+    <Compile Include="Mace.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,8 +158,10 @@
     <Compile Include="Room.cs" />
     <Compile Include="Siren.cs" />
     <Compile Include="SpearThrow.cs" />
+    <Compile Include="Staff.cs" />
     <Compile Include="State.cs" />
     <Compile Include="TeamHeal.cs" />
+    <Compile Include="ThrowingKnife.cs" />
     <Compile Include="Tyche.cs" />
     <Compile Include="World.cs" />
     <Compile Include="Zeus.cs" />
