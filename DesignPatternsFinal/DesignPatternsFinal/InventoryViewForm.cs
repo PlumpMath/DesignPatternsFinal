@@ -13,10 +13,12 @@ namespace DesignPatternsFinal
     public partial class InventoryViewForm : Form
     {
         private Character owner;
+        public InventoryViewForm()
+        {
+            InitializeComponent();
+        }
         public InventoryViewForm(List<Item> obj)
         {
-
-            InitializeComponent();
             if (obj != null)
             {
                 int x = 0;

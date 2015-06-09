@@ -9,10 +9,19 @@ namespace DesignPatternsFinal
     class ThrowingKnife : Item
     {
         public ThrowingKnife()
+        {}
+
+        public string getName()
         {
-            name = "Throwing Knife";
-            damageMax = 10;
-            damageMin = 6;
+            return "Throwing Knife";
+        }
+        public int getDamageMax()
+        {
+            return 10;
+        }
+        public int getDamageMin()
+        {
+            return 6;
         }
     }
 }

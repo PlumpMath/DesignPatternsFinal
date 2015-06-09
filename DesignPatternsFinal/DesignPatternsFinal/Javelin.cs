@@ -14,5 +14,9 @@ namespace DesignPatternsFinal
             damageMax = 30;
             damageMin = 1;
         }
+
+        public abstract string getName();
+        public abstract int getDamageMax();
+        public abstract int getDamageMin();
     }
 }

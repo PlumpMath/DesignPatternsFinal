@@ -14,5 +14,9 @@ namespace DesignPatternsFinal
             healMax = 25;
             healMin = 5;
         }
+
+        public abstract string getName();
+        public abstract int getHealMax();
+        public abstract int getHealMin();
     }
 }

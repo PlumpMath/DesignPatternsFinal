@@ -10,9 +10,19 @@ namespace DesignPatternsFinal
     {
         public Sheild()
         {
-            name = "Sheild";
-            blockMax = 75;
-            blockMin = 20;
+        }
+
+        public abstract string getName()
+        {
+            return "Sheild";
+        }
+        public abstract int getBlockMax()
+        {
+            return 75;
+        }
+        public abstract int getBlockMin()
+        {
+            return 20;
         }
     }
 }

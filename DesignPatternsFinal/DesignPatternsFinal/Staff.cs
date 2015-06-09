@@ -10,9 +10,19 @@ namespace DesignPatternsFinal
     {
         public Staff()
         {
-            name = "Staff";
-            damageMax = 20;
-            damageMin = 5;
+        }
+
+        public string getName()
+        {
+            return "Staff";
+        }
+        public int getDamageMax()
+        {
+            return 20;
+        }
+        public int getDamageMin()
+        {
+            return 5;
         }
     }
 }

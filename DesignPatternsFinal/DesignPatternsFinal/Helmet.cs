@@ -14,5 +14,9 @@ namespace DesignPatternsFinal
             blockMax = 30;
             blockMin = 25;
         }
+
+        public abstract string getName();
+        public abstract int getBlockMax();
+        public abstract int getBlockMin();
     }
 }

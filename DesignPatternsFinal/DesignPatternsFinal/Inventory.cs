@@ -6,25 +6,23 @@ using System.Threading.Tasks;
 
 namespace DesignPatternsFinal
 {
-    public class Inventory : IAbility
+    public abstract class Inventory : IAbility
     {
         private Character owner;
         private System.Collections.Generic.List<Item> items;
 
         public Inventory()
         {
+            Item a;
             items = new List<Item>();
-            items.Add(new LongSword());
-            items.Add(new BowNArrow());
-            items.Add(new Dagger());
-            items.Add(new Helmet());
-            items.Add(new Curiass());
+            items.Add(a = new LongSword());
+            items.Add(a = new BowNArrow());
+            items.Add(a = new Dagger());
+            items.Add(a = new Helmet());
+            items.Add(a = new Curiass());
         }
 
-        public List<Item> getList()
-        {
-            return items;
-        }
+        public abstract List<Item> getList();
 
         public string getName()
         {

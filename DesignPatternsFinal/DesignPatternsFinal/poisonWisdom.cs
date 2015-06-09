@@ -14,5 +14,9 @@ namespace DesignPatternsFinal
             poisonMax = 14;
             poisonMin = 7;
         }
+
+        public abstract string getName();
+        public abstract int getPoisonMax();
+        public abstract int getPoisonMin();
     }
 }

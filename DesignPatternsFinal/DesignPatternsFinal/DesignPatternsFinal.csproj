@@ -111,6 +111,7 @@
       <DependentUpon>InventoryViewForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Item.cs" />
+    <Compile Include="InventoryDecorator.cs" />
     <Compile Include="Javelin.cs" />
     <Compile Include="LightningStrike.cs" />
     <Compile Include="LongSword.cs" />

@@ -9,10 +9,20 @@ namespace DesignPatternsFinal
     class Axe : Item
     {
         public Axe()
+        {}
+
+        public string getName()
         {
-            name = "Axe";
-            damageMax = 20;
-            damageMin = 5;
+            return "Axe";
         }
+        public int getDamageMax()
+        {
+            return 20;
+        }
+        public int getDamageMin()
+        {
+            return 5;
+        }
+     
     }
 }
