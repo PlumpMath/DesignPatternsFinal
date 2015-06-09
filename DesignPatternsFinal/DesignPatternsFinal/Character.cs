@@ -53,8 +53,9 @@ namespace DesignPatternsFinal
         public abstract IAbility turn(Party team, Party enemies );
         public abstract Character aim(Party enemy);
 
-		public void levelUp()
-		{
+		public String levelUp()
+		{	
+			String retStr = "";
 			if (XP > Level * 500) ;
 			{
 				HP += 50;
@@ -67,7 +68,9 @@ namespace DesignPatternsFinal
 				Con++;
 				Wis++;
 				Cha++;
+				retStr = Name + " leveled up!\n";
 			}
+			return retStr;
 		}
 
         public object Clone()

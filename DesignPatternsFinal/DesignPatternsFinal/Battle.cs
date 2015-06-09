@@ -72,14 +72,14 @@ namespace DesignPatternsFinal
             }
             if (home.size() == 0)
             {
-                response += ("You lost...");
+                response += ("You lost...\n");
                 this.fighting = false;
             }
             else if (away.size() == 0)
             {
+                response += ("You won!\n");
 				foreach (Character him in home)
-					him.levelUp ();
-                response += ("You won!");
+					response += him.levelUp ();
                 this.fighting = false;
             }
             return response;
@@ -153,8 +153,10 @@ namespace DesignPatternsFinal
                     Character test = away.getCharacter(awayIx);
                     if (test.HP <= 0)
                     {
+						foreach (Character him in home)
+							him.XP += 25;
 						test.defeat ();
-                        response += test.Name + " has been killed.\n";
+                        response += test.Name + " has been killed. Everyone gains 25XP.\n";
                         speed.RemoveAt(i);
                         away.removeCharacter(awayIx);
                         i--;
