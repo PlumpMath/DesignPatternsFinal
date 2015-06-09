@@ -10,13 +10,19 @@ namespace DesignPatternsFinal
     {
         public healCharisma()
         {
-            name = "Heal Charisma";
-            healMax = 15;
-            healMin = 7;
         }
 
-        public abstract string getName();
-        public abstract int getHealMax();
-        public abstract int getHealMin();
+        public string getName()
+        {
+            return "Heal Charisma";
+        }
+        public int getHealMax()
+        {
+            return 15;
+        }
+        public int getHealMin()
+        {
+            return 7;
+        }
     }
 }

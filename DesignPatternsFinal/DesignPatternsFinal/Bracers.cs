@@ -10,13 +10,19 @@ namespace DesignPatternsFinal
     {
         public Bracers()
         {
-            name = "Bracers";
-            blockMax = 25;
-            blockMin = 15;
         }
 
-        public abstract string getName();
-        public abstract int getBlockMax();
-        public abstract int getBlockMin();
+        public string getName()
+        {
+            return "Bracers";
+        }
+        public int getBlockMax()
+        {
+            return 25;
+        }
+        public int getBlockMin()
+        {
+            return 15;
+        }
     }
 }

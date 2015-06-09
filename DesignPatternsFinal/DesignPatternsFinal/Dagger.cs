@@ -10,12 +10,18 @@ namespace DesignPatternsFinal
     {
         public Dagger()
         {
-            name = "Dagger";
-            damageMax = 5;
-            damageMin = 1;
         }
-        public abstract string getName();
-        public abstract int getDamageMax();
-        public abstract int getDamageMin();
+        public string getName()
+        {
+            return "Dagger";
+        }
+        public int getDamageMax()
+        {
+            return 5;
+        }
+        public int getDamageMin()
+        {
+            return 1;
+        }
     }
 }

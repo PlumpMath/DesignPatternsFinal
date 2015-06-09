@@ -10,13 +10,19 @@ namespace DesignPatternsFinal
     {
         public Mace()
         {
-            name = "Mace";
-            damageMax = 10;
-            damageMin = 5;
         }
 
-        public abstract string getName();
-        public abstract int getDamageMax();
-        public abstract int getDamageMin();
+        public string getName()
+        {
+            return "Mace";
+        }
+        public int getDamageMax()
+        {
+            return 10;
+        }
+        public int getDamageMin()
+        {
+            return 5;
+        }
     }
 }

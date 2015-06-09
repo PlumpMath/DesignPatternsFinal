@@ -10,13 +10,19 @@ namespace DesignPatternsFinal
     {
         public Helmet()
         {
-            name = "Helmet";
-            blockMax = 30;
-            blockMin = 25;
         }
 
-        public abstract string getName();
-        public abstract int getBlockMax();
-        public abstract int getBlockMin();
+        public string getName()
+        {
+            return "Helmet";
+        }
+        public int getBlockMax()
+        {
+            return 30;
+        }
+        public int getBlockMin()
+        {
+            return 25;
+        }
     }
 }

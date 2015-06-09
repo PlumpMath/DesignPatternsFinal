@@ -10,13 +10,19 @@ namespace DesignPatternsFinal
     {
         public Fists()
         {
-            name = "Fists";
-            damageMax = 7;
-            damageMin = 3;
         }
 
-        public abstract string getName();
-        public abstract int getDamageMax();
-        public abstract int getDamageMin();
+        public string getName()
+        {
+            return "Fists";
+        }
+        public int getDamageMax()
+        {
+            return 7;
+        }
+        public int getDamageMin()
+        {
+            return 3;
+        }
     }
 }

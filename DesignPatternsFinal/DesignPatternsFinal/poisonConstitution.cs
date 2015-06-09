@@ -9,14 +9,19 @@ namespace DesignPatternsFinal
     class poisonConstitution : Item
     {
         public poisonConstitution()
-        {
-            name = "Poison Constitution";
-            poisonMax = 12;
-            poisonMin = 6;
-        }
+        { }
 
-        public abstract string getName();
-        public abstract int getPoisonMax();
-        public abstract int getPoisonMin();
+         public string getName()
+        {
+            return "Poison Constitution";
+        }
+        public int getPoisonMax()
+        {
+            return 12;
+        }
+        public int getPoisonMin()
+        {
+            return 6;
+        }
     }
 }

@@ -10,13 +10,19 @@ namespace DesignPatternsFinal
     {
         public Javelin()
         {
-            name = "Javelin";
-            damageMax = 30;
-            damageMin = 1;
         }
 
-        public abstract string getName();
-        public abstract int getDamageMax();
-        public abstract int getDamageMin();
+        public string getName()
+        {
+            return "Javelin";
+        }
+        public int getDamageMax()
+        {
+            return 30;
+        }
+        public int getDamageMin()
+        {
+            return 1;
+        }
     }
 }

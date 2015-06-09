@@ -10,13 +10,19 @@ namespace DesignPatternsFinal
     {
         public healConstitution()
         {
-            name = "Heal Constitution";
-            healMax = 5;
-            healMin = 1;
         }
 
-        public abstract string getName();
-        public abstract int getHealMax();
-        public abstract int getHealMin();
+        public string getName()
+        {
+            return "Heal Constitution";
+        }
+        public int getHealMax()
+        {
+            return 5;
+        }
+        public int getHealMin()
+        {
+            return 1;
+        }
     }
 }

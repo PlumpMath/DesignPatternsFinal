@@ -10,13 +10,19 @@ namespace DesignPatternsFinal
     {
         public LongSword()
         {
-            name = "Long Sword";
-            damageMax = 15;
-            damageMin = 10;
         }
 
-        public abstract string getName();
-        public abstract int getDamageMax();
-        public abstract int getDamageMin();
+        public string getName()
+        {
+            return "Long Sword";
+        }
+        public int getDamageMax()
+        {
+            return 15;
+        }
+        public int getDamageMin()
+        {
+            return 10;
+        }
     }
 }

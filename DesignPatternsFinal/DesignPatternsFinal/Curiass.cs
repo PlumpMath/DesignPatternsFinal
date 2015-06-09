@@ -10,13 +10,19 @@ namespace DesignPatternsFinal
     {
         public Curiass()
         {
-            name = "Curiass";
-            blockMax = 40;
-            blockMin = 20;
         }
 
-        public abstract string getName();
-        public abstract int getBlockMax();
-        public abstract int getBlockMin();
+        public string getName()
+        {
+            return "Curiass";
+        }
+        public int getBlockMax()
+        {
+            return 40;
+        }
+        public int getBlockMin()
+        {
+            return 20;
+        }
     }
 }

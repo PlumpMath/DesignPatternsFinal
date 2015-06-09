@@ -10,13 +10,19 @@ namespace DesignPatternsFinal
     {
         public BowNArrow()
         {
-            name = "Bow and Arrow";
-            damageMax = 25;
-            damageMin = 10;
         }
-        public abstract string getName();
-        public abstract int getDamageMax();
-        public abstract int getDamageMin();
+        public string getName()
+        {
+            return "Bow and Arrow";
+        }
+        public int getDamageMax()
+        {
+            return 25;
+        }
+        public int getDamageMin()
+        {
+            return 10;
+        }
         
 
     }

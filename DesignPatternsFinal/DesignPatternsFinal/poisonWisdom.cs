@@ -10,13 +10,19 @@ namespace DesignPatternsFinal
     {
         public poisonWisdom()
         {
-            name = "Poison Wisdom";
-            poisonMax = 14;
-            poisonMin = 7;
         }
 
-        public abstract string getName();
-        public abstract int getPoisonMax();
-        public abstract int getPoisonMin();
+        public string getName()
+        {
+            return "Poison Wisdom";
+        }
+        public int getPoisonMax()
+        {
+            return 14;
+        }
+        public int getPoisonMin()
+        {
+            return 7;
+        }
     }
 }

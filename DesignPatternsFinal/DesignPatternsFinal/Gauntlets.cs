@@ -10,13 +10,19 @@ namespace DesignPatternsFinal
     {
         public Gauntlets()
         {
-            name = "Gauntlets";
-            blockMax = 20;
-            blockMin = 4;
         }
 
-        public abstract string getName();
-        public abstract int getBlockMax();
-        public abstract int getBlockMin();
+        public string getName()
+        {
+            return "Gauntlets";
+        }
+        public int getBlockMax()
+        {
+            return 20;
+        }
+        public int getBlockMin()
+        {
+            return 4;
+        }
     }
 }
