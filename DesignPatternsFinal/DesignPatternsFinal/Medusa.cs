@@ -8,7 +8,7 @@ namespace DesignPatternsFinal
 {
     class Medusa : Beast
     {
-		private static boolean defeated;
+		private static bool defeated;
 		private static Medusa it;
 
         public Medusa()
@@ -33,7 +33,7 @@ namespace DesignPatternsFinal
 			return it;
 		}
 
-		public Boolean isDefeated()
+		public static Boolean isDefeated()
 		{
 			return defeated;
 		}

@@ -56,7 +56,7 @@ namespace DesignPatternsFinal
 		public String levelUp()
 		{	
 			String retStr = "";
-			if (XP > Level * 500) ;
+			if (XP > Level * 500)
 			{
 				HP += 50;
 				maxHP += 50;
@@ -72,6 +72,7 @@ namespace DesignPatternsFinal
 			}
 			return retStr;
 		}
+        public abstract Item defeat();
 
         public object Clone()
         {

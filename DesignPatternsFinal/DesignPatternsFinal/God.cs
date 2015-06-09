@@ -24,6 +24,11 @@ namespace DesignPatternsFinal
             return choice.getDecision();
         }
         override
+        public Item defeat()
+        {
+            return null;
+        }
+        override
         public string ToString()
         {
             return Name;

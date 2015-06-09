@@ -8,7 +8,7 @@ namespace DesignPatternsFinal
 {
     class Cerberus : Beast
     {
-		private static boolean defeated;
+		private static bool defeated;
 		private static Cerberus it;
 
         private Cerberus()
@@ -33,7 +33,7 @@ namespace DesignPatternsFinal
 			return it;
 		}
 
-		public Boolean isDefeated()
+		public static Boolean isDefeated()
 		{
 			return defeated;
 		}
@@ -42,6 +42,7 @@ namespace DesignPatternsFinal
 		public Item defeat()
 		{	
 			defeated = true;
+            return null;
 		}
     }
 }
