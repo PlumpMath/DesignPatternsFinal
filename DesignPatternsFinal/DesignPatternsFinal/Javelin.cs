@@ -8,7 +8,11 @@ namespace DesignPatternsFinal
 {
     class Javelin: Item
     {
-        //damageMax = 30;
-            //damageMin = 1;
+        public Javelin()
+        {
+            name = "Javelin";
+            damageMax = 30;
+            damageMin = 1;
+        }
     }
 }

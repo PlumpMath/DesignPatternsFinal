@@ -8,5 +8,11 @@ namespace DesignPatternsFinal
 {
     class healMagic : Item
     {
+        public healMagic()
+        {
+            name = "Heal Magic";
+            healMax = 25;
+            healMin = 5;
+        }
     }
 }

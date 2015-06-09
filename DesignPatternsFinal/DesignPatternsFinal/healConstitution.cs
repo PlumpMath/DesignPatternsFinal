@@ -8,5 +8,11 @@ namespace DesignPatternsFinal
 {
     class healConstitution : Item
     {
+        public healConstitution()
+        {
+            name = "Heal Constitution";
+            healMax = 5;
+            healMin = 1;
+        }
     }
 }

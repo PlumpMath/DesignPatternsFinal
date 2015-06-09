@@ -8,7 +8,11 @@ namespace DesignPatternsFinal
 {
     class BowNArrow : Item
     {
-        //damageMax = 25;
-           // damageMin = 10;
+        public BowNArrow()
+        {
+            name = "Bow and Arrow";
+            damageMax = 25;
+            damageMin = 10;
+        }
     }
 }

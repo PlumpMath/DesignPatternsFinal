@@ -8,7 +8,11 @@ namespace DesignPatternsFinal
 {
     class Staff : Item
     {
-        //damageMax = 20;
-            //damageMin = 5;
+        public Staff()
+        {
+            name = "Staff";
+            damageMax = 20;
+            damageMin = 5;
+        }
     }
 }
