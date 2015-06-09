@@ -8,5 +8,11 @@ namespace DesignPatternsFinal
 {
     class LongSword : Item
     {
+        public LongSword()
+        {
+            name = "Long Sword";
+            damageMax = 15;
+            damageMin = 10;
+        }
     }
 }

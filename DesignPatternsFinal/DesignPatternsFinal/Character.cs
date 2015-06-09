@@ -34,7 +34,7 @@ namespace DesignPatternsFinal
             moves = new List<IAbility>();
             moves.Add(new Attack(this));
             moves.Add(new Defend(this));
-            moves.Add(new Item(this));
+            //moves.Add(new Item(this));
         }
         public enum MOVES
         {

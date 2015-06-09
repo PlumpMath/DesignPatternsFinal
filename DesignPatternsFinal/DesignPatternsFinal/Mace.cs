@@ -8,5 +8,11 @@ namespace DesignPatternsFinal
 {
     class Mace : Item
     {
+        public Mace()
+        {
+            name = "Mace";
+            damageMax = 10;
+            damageMin = 5;
+        }
     }
 }

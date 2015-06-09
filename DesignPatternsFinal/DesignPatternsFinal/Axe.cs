@@ -8,5 +8,11 @@ namespace DesignPatternsFinal
 {
     class Axe : Item
     {
+        public Axe()
+        {
+            name = "Axe";
+            damageMax = 20;
+            damageMin = 5;
+        }
     }
 }

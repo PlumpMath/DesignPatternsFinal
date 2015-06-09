@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace DesignPatternsFinal
 {
-    class Fists : Item
+    class poisonMagic : Item
     {
-        public Fists()
+        public poisonMagic()
         {
-            name = "Fists";
-            damageMax = 7;
-            damageMin = 3;
+            name = "Poison Magic";
+            poisonMax = 30;
+            poisonMin = 10;
         }
     }
 }

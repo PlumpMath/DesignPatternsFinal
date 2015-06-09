@@ -8,5 +8,11 @@ namespace DesignPatternsFinal
 {
     class ThrowingKnife : Item
     {
+        public ThrowingKnife()
+        {
+            name = "Throwing Knife";
+            damageMax = 10;
+            damageMin = 6;
+        }
     }
 }

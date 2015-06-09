@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace DesignPatternsFinal
 {
-    interface IWeaponBehavior
+    class poisonHP : Item
     {
-        string weapon();
-        int getDamageMin();
-        int getDamageMax();
+        public poisonHP()
+        {
+            name = "Poison Health";
+            poisonMax = 30;
+            poisonMin = 1;
+        }
     }
 }
