@@ -11,6 +11,10 @@ namespace DesignPatternsFinal
         public int HP { get { return hp; } set { hp = value; } }
         private int maxHp;
         public int maxHP { get { return maxHp; } set { maxHp = value; } }
+		private int level;
+		public int Level { get { return level; } set { hp = level; } }
+		private int xp;
+		public int XP { get { return xp; } set { xp = value; } }
         private int strength;
         public int Str { get { return strength; } set { strength = value; } }
         private int dexterity;
@@ -34,6 +38,8 @@ namespace DesignPatternsFinal
             moves = new List<IAbility>();
             moves.Add(new Attack(this));
             moves.Add(new Defend(this));
+			Level = 1;
+			XP = 0;
             //moves.Add(new Item(this));
         }
         public enum MOVES
@@ -46,6 +52,23 @@ namespace DesignPatternsFinal
 
         public abstract IAbility turn(Party team, Party enemies );
         public abstract Character aim(Party enemy);
+
+		public void levelUp()
+		{
+			if (XP > Level * 500) ;
+			{
+				HP += 50;
+				maxHP += 50;
+				Level++;
+				XP = 0;
+				Str++;
+				Dex++;
+				Mag++;
+				Con++;
+				Wis++;
+				Cha++;
+			}
+		}
 
         public object Clone()
         {
