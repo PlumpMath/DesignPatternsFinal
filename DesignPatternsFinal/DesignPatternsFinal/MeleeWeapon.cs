@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace ItemsProject
+namespace DesignPatternsFinal
 {
-    class MeleeWeapons : IWeaponBehavior
+    class MeleeWeapon : IWeaponBehavior
     {
         private int damageMin;
         private int damageMax;
-        public MeleeWeapons()
+        public MeleeWeapon()
         {}
 
         public int getDamageMin()
@@ -22,8 +23,9 @@ namespace ItemsProject
             return damageMax;
         }
 
-        public void weapon()
+        public string weapon()
         {
+            string desc = "";
             Console.WriteLine("Choose a melee weapon: ");
             Console.WriteLine("1) Mace");
             Console.WriteLine("2) Long Sword");
@@ -34,16 +36,16 @@ namespace ItemsProject
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
-                    case 1: mace();
-                        break;
-                    case 2: longSword();
-                        break;
-                    case 3: dagger();
-                        break;
-                    case 4: axe();
-                        break;
-                    default: fists();
-                        break;
+                    case 1: desc = mace();
+                        return desc;
+                    case 2: desc = longSword();
+                        return desc;
+                    case 3: desc = dagger();
+                        return desc;
+                    case 4: desc = axe();
+                        return desc;
+                    default: desc = fists();
+                        return desc;
                 }
             }
             catch(Exception e)
@@ -51,41 +53,48 @@ namespace ItemsProject
                 Console.WriteLine("Please enter a number corresponding to the weapon of choice.");
                 weapon();
             }
+            return desc;
+
         }
 
-        public void mace()
+        public string mace()
         {
-            Console.WriteLine("Your hero is now using the mace!");
             damageMax = 10;
             damageMin = 5;
+            string desc = "Your hero is now using the Mace!";
+            return desc;
         }
 
-        public void longSword()
+        public string longSword()
         {
-            Console.WriteLine("Your hero is now using the Long Sword!");
             damageMax = 15;
             damageMin = 10;
+            string desc = "Your hero is now using the Long Sword!";
+            return desc;
         }
 
-        public void dagger()
+        public string dagger()
         {
-            Console.WriteLine("Your hero is now using the Dagger!");
             damageMax = 5;
             damageMin = 1;
+            string desc = "Your hero is now using the Dagger!";
+            return desc;
         }
 
-        public void axe()
+        public string axe()
         {
-            Console.WriteLine("Your hero is now using the Axe!");
             damageMax = 20;
             damageMin = 5;
+            string desc = "Your hero is now using the Axe!";
+            return desc;
         }
 
-        public void fists()
+        public string fists()
         {
-            Console.WriteLine("Your hero is now using their fists!");
             damageMax = 7;
             damageMin = 3;
+            string desc = "Your hero is now using their fists!";
+            return desc;
         }
     }
 }

@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatternsFinal
 {
-    interface IWeaponBehavior
+    class Javelin: Item
     {
-        string weapon();
-        int getDamageMin();
-        int getDamageMax();
     }
 }

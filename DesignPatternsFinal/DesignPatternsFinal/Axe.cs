@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatternsFinal
 {
-    interface IWeaponBehavior
+    class Axe : Item
     {
-        string weapon();
-        int getDamageMin();
-        int getDamageMax();
     }
 }

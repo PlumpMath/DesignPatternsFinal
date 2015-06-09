@@ -83,6 +83,7 @@
             this.Controls.Add(this.textConsole);
             this.Name = "MainForm";
             this.Text = "Gods and Monsters";
+            this.Load += new System.EventHandler(this.MainForm_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

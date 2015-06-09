@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DesignPatternsFinal
 {
-    interface IWeaponBehavior
+    public abstract class Item
     {
-        string weapon();
-        int getDamageMin();
-        int getDamageMax();
+        private IWeaponBehavior weaponBehav;
+        public Item()
+        {}
     }
 }

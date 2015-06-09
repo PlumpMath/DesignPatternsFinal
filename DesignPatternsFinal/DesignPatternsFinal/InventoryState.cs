@@ -10,6 +10,7 @@ namespace DesignPatternsFinal
     {
         private static InventoryState _inventoryState;
         private static System.Windows.Forms.Form InventoryForm;
+        private Inventory inventory;
 
         public InventoryState()
         {
@@ -18,11 +19,18 @@ namespace DesignPatternsFinal
                 InventoryForm = new InventoryViewForm();
                 _inventoryState = this;
                 inventoryState = _inventoryState;
+                inventory = new Inventory();
             }
         }
-        new public void toInventory()
+
+        public Inventory getInventory()
         {
-            
+            return inventory;
+        }
+
+        public void toInventory(object item)
+        {
+            //inventory.add(item);
         }
         override public System.Windows.Forms.Form StateView()
         {

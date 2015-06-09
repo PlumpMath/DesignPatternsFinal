@@ -16,6 +16,7 @@ namespace DesignPatternsFinal
     {
         //private World gameWorld;
         private ConsoleToTextbox_Adaptor _writer;
+        private Inventory inventory;
 
         public MainForm()
         {
@@ -43,6 +44,8 @@ namespace DesignPatternsFinal
             hero_list.Add(hero4.Name, hero4);
             hero_list.Add(hero5.Name, hero5);
             NewGameForm newGame = new NewGameForm(ref heroParty, ref hero_list);
+            InventoryState newInventory = new InventoryState();
+            inventory = newInventory.getInventory();
             this.Hide();
             //gameWorld = new World();
         }
@@ -80,6 +83,11 @@ namespace DesignPatternsFinal
         private void button3_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void MainForm_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
