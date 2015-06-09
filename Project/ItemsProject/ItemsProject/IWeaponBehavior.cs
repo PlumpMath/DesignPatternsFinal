@@ -8,5 +8,7 @@ namespace ItemsProject
     interface IWeaponBehavior
     {
         void weapon();
+        int getDamageMin();
+        int getDamageMax();
     }
 }
