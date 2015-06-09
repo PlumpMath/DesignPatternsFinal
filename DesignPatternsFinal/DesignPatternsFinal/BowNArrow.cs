@@ -8,5 +8,7 @@ namespace DesignPatternsFinal
 {
     class BowNArrow : Item
     {
+        //damageMax = 25;
+           // damageMin = 10;
     }
 }

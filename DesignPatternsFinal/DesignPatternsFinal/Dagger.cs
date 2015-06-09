@@ -8,5 +8,7 @@ namespace DesignPatternsFinal
 {
     class Dagger : Item
     {
+        //damageMax = 5;
+           // damageMin = 1;
     }
 }

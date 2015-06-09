@@ -8,5 +8,7 @@ namespace DesignPatternsFinal
 {
     class Mace : Item
     {
+        //damageMax = 10;
+            //damageMin = 5;
     }
 }

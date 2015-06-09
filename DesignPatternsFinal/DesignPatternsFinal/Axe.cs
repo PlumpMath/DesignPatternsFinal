@@ -8,5 +8,7 @@ namespace DesignPatternsFinal
 {
     class Axe : Item
     {
+        //damageMax = 20;
+            //damageMin = 5;
     }
 }

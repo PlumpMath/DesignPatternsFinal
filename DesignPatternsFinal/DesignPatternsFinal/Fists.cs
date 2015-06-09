@@ -8,5 +8,7 @@ namespace DesignPatternsFinal
 {
     class Fists : Item
     {
+        //damageMax = 7;
+            //damageMin = 3;
     }
 }

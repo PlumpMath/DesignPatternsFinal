@@ -8,5 +8,7 @@ namespace DesignPatternsFinal
 {
     class Javelin: Item
     {
+        //damageMax = 30;
+            //damageMin = 1;
     }
 }
