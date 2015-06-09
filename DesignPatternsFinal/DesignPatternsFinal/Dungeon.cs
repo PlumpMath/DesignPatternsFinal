@@ -35,6 +35,11 @@ namespace DesignPatternsFinal
             return current.getDes();
         }
 
+        public Room getCurrent()
+        {
+            return this.current;
+        }
+
         public Room getMid()
         {
             return this.mid;
