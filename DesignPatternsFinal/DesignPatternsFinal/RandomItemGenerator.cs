@@ -5,7 +5,7 @@ namespace DesignPatternsFinal
 {
 	class RandomItemGenerator
 	{
-		public static Item getItem( int roomNum )
+		public static Item getItem()
 		{
 			Random rand = new Random();
 			double choice = rand.NextDouble ();
