@@ -28,6 +28,15 @@ namespace DesignPatternsFinal
                 CheckBox check = new CheckBox();
                 check.Text = p.Value.Name;
                 check.Location = new System.Drawing.Point(0, 22 * x);
+                check.Click += delegate
+                {
+                    if (checkedListBox1.CheckedItems.Count > 4)
+                    {
+                        check.Checked = false;
+                        this.Update();
+                    }
+                    this.Update();
+                };
                 this.checkedListBox1.Controls.Add(check);
                 x++;
             }
@@ -39,7 +48,8 @@ namespace DesignPatternsFinal
         {
             foreach(CheckBox c in checkedListBox1.Controls)
             {
-                heroTemp.addCharacter(((Character)(poolTemp[c.Text])));//.Clone());
+                if(c.Checked==true)
+                    heroTemp.addCharacter(((Character)(poolTemp[c.Text])));//.Clone());
             }
             World theWorld = World.init(ref heroTemp);
             theWorld.init();
@@ -85,7 +95,7 @@ namespace DesignPatternsFinal
         private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             CheckedListBox items = (CheckedListBox)sender;
-            if (items.CheckedItems.Count > 2)
+            if (items.CheckedItems.Count > 4)
             {
                 e.NewValue = CheckState.Unchecked;
                 this.Update();
