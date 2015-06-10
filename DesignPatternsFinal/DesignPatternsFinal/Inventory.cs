@@ -24,6 +24,16 @@ namespace DesignPatternsFinal
         {
             items.Add(item);
         }
+
+        public void setList(List<Item> list)
+        {
+            items = list;
+        }
+
+        public void delete(Item item)
+        {
+            items.Remove(item);
+        }
         public string getName()
         {
             return "Inventory";
@@ -127,6 +137,9 @@ namespace DesignPatternsFinal
                 int dmg = number.Next(min, max + 1);
                 owner.Str += dmg;
             }
+            inv.delete(item);
+            List<Item> newList = inv.getList();
+            inv.setList(newList);
             return response;
         }
     }
