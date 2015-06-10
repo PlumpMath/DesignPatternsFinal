@@ -39,7 +39,7 @@ namespace DesignPatternsFinal
             while(theEvent.theFight().stillFighting())
             {
                 refreshEnemies();
-                battleOutput.Text = theEvent.theFight().turn() + "\n";
+                battleOutput.Text += theEvent.theFight().turn();
                 this.Update();
                 PrimaryViewForm.onUpdate();
             }

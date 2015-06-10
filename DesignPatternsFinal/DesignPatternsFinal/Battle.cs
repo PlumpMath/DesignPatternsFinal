@@ -64,7 +64,7 @@ namespace DesignPatternsFinal
                     if (home.size() > 0)
                     {
                         away.getCharacter(i).turn(away, home);
-                        speed[ix] = home.getCharacter(i).Dex;
+                        speed[ix] = away.getCharacter(i).Dex;
                         response += killed(speed);
                     }
                 }
