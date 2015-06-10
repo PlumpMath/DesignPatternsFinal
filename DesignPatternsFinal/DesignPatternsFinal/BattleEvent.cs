@@ -20,7 +20,7 @@ namespace DesignPatternsFinal
         {
 			Random rand = new Random ();
 			double selection = rand.NextDouble ();
-			if (selection > .67) 
+			if (selection > .67 || roomNum == 31 || roomNum == 54) 
 			{
 				a = RandomEnemyGenerator.getEnemies (roomNum);
 				if (!a.isEmpty ()) 
