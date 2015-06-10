@@ -2,42 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace DesignPatternsFinal
+namespace ItemsProject
 {
-    class Helmet : Item
+    class javelin : item
     {
-        public Helmet()
-        {
-        }
         override
         public string getname()
         {
-            return "Helmet";
-        }
-        override
-        public int getBlockMax()
-        {
-            return 30;
-        }
-        override
-        public int getBlockMin()
-        {
-            return 25;
+            return "Javelin";
         }
         override
         public int getDamageMax()
         {
-            return 0;
+            return 30;
         }
         override
         public int getDamageMin()
         {
-            return 0;
+            return 1;
         }
         override
-        public int getHealMax()
+       public int getHealMax()
         {
             return 0;
         }
@@ -53,6 +39,16 @@ namespace DesignPatternsFinal
         }
         override
         public int getPoisonMin()
+        {
+            return 0;
+        }
+        override
+        public int getBlockMax()
+        {
+            return 0;
+        }
+        override
+        public int getBlockMin()
         {
             return 0;
         }

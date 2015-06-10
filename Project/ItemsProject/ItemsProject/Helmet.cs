@@ -2,15 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace DesignPatternsFinal
+namespace ItemsProject
 {
-    class Helmet : Item
+    class Helmet : item
     {
-        public Helmet()
-        {
-        }
         override
         public string getname()
         {

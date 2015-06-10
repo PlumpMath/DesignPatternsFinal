@@ -9,9 +9,18 @@ namespace ItemsProject
     {
         static void Main(string[] args)
         {
-            Character a = new Character();
-            a.setWeapon(new MeleeWeapons());
-            a.printWeapon();
+            List<item> stuff;
+            inventory a = new inventory();
+            a.add(new Helmet());
+            a.add(new javelin());
+            a.add(new javelin());
+            a.add(new Helmet());
+            a.add(new javelin());
+            stuff = a.getList();
+            foreach(item p in stuff)
+            {
+                Console.WriteLine(p.getname());
+            }
             int i = 0;
             while(i == 0)
             {

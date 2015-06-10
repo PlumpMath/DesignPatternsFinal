@@ -9,10 +9,52 @@ namespace DesignPatternsFinal
     class Axe : Item
     {
         public Axe()
+        {}
+        override
+        public string getname()
         {
-            name = "Axe";
-            damageMax = 20;
-            damageMin = 5;
+            return "Axe";
         }
+        override
+        public int getDamageMax()
+        {
+            return 20;
+        }
+        override
+        public int getDamageMin()
+        {
+            return 5;
+        }
+        override
+       public int getHealMax()
+        {
+            return 0;
+        }
+        override
+        public int getHealMin()
+        {
+            return 0;
+        }
+        override
+        public int getPoisonMax()
+        {
+            return 0;
+        }
+        override
+        public int getPoisonMin()
+        {
+            return 0;
+        }
+        override
+        public int getBlockMax()
+        {
+            return 0;
+        }
+        override
+        public int getBlockMin()
+        {
+            return 0;
+        }
+     
     }
 }

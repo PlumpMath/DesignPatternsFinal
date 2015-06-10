@@ -41,17 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArmorItems.cs" />
-    <Compile Include="Character.cs" />
-    <Compile Include="HealthItems.cs" />
-    <Compile Include="MagicAbilities.cs" />
-    <Compile Include="MeleeWeapons.cs" />
-    <Compile Include="PoisonItems.cs" />
+    <Compile Include="Helmet.cs" />
+    <Compile Include="inventory.cs" />
+    <Compile Include="item.cs" />
+    <Compile Include="javelin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RangedWeapons.cs" />
-    <Compile Include="Room.cs" />
-    <Compile Include="IWeaponBehavior.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -10,9 +10,51 @@ namespace DesignPatternsFinal
     {
         public Mace()
         {
-            name = "Mace";
-            damageMax = 10;
-            damageMin = 5;
+        }
+        override
+        public string getname()
+        {
+            return "Mace";
+        }
+        override
+        public int getDamageMax()
+        {
+            return 10;
+        }
+        override
+        public int getDamageMin()
+        {
+            return 5;
+        }
+        override
+       public int getHealMax()
+        {
+            return 0;
+        }
+        override
+        public int getHealMin()
+        {
+            return 0;
+        }
+        override
+        public int getPoisonMax()
+        {
+            return 0;
+        }
+        override
+        public int getPoisonMin()
+        {
+            return 0;
+        }
+        override
+        public int getBlockMax()
+        {
+            return 0;
+        }
+        override
+        public int getBlockMin()
+        {
+            return 0;
         }
     }
 }

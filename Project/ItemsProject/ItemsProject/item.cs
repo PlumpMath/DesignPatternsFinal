@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace DesignPatternsFinal
+namespace ItemsProject
 {
-    public abstract class Item
+    public abstract class item
     {
         public abstract string getname();
         public abstract int getDamageMax();

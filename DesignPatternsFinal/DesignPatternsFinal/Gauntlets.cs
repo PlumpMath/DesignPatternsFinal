@@ -10,9 +10,51 @@ namespace DesignPatternsFinal
     {
         public Gauntlets()
         {
-            name = "Gauntlets";
-            blockMax = 20;
-            blockMin = 4;
+        }
+        override
+        public string getname()
+        {
+            return "Gauntlets";
+        }
+        override
+        public int getBlockMax()
+        {
+            return 20;
+        }
+        override
+        public int getBlockMin()
+        {
+            return 4;
+        }
+        override
+        public int getDamageMax()
+        {
+            return 0;
+        }
+        override
+        public int getDamageMin()
+        {
+            return 0;
+        }
+        override
+        public int getHealMax()
+        {
+            return 0;
+        }
+        override
+        public int getHealMin()
+        {
+            return 0;
+        }
+        override
+        public int getPoisonMax()
+        {
+            return 0;
+        }
+        override
+        public int getPoisonMin()
+        {
+            return 0;
         }
     }
 }

@@ -10,9 +10,53 @@ namespace DesignPatternsFinal
     {
         public BowNArrow()
         {
-            name = "Bow and Arrow";
-            damageMax = 25;
-            damageMin = 10;
         }
+        override
+        public string getname()
+        {
+            return "Bow and Arrow";
+        }
+        override
+        public int getDamageMax()
+        {
+            return 25;
+        }
+        override
+        public int getDamageMin()
+        {
+            return 10;
+        }
+        override
+       public int getHealMax()
+        {
+            return 0;
+        }
+        override
+        public int getHealMin()
+        {
+            return 0;
+        }
+        override
+        public int getPoisonMax()
+        {
+            return 0;
+        }
+        override
+        public int getPoisonMin()
+        {
+            return 0;
+        }
+        override
+        public int getBlockMax()
+        {
+            return 0;
+        }
+        override
+        public int getBlockMin()
+        {
+            return 0;
+        }
+        
+
     }
 }

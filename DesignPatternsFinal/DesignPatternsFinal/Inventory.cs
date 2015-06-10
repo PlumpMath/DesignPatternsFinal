@@ -14,18 +14,16 @@ namespace DesignPatternsFinal
         public Inventory()
         {
             items = new List<Item>();
-            items.Add(new LongSword());
-            items.Add(new BowNArrow());
-            items.Add(new Dagger());
-            items.Add(new Helmet());
-            items.Add(new Curiass());
         }
-
         public List<Item> getList()
         {
             return items;
         }
 
+        public void add(Item item)
+        {
+            items.Add(item);
+        }
         public string getName()
         {
             return "Inventory";
@@ -35,16 +33,9 @@ namespace DesignPatternsFinal
             owner = own;
         }
 
-        public void add(Item item)
-        {
-            items.Add(item);
-        }
-
         public string ability(Party party)
         {
             string response = "";
-            InventoryViewForm form = new InventoryViewForm(items);
-            form.Show();
             return response;
         }
     }

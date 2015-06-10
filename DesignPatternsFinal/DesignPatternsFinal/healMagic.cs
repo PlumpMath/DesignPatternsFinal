@@ -10,9 +10,51 @@ namespace DesignPatternsFinal
     {
         public healMagic()
         {
-            name = "Heal Magic";
-            healMax = 25;
-            healMin = 5;
+        }
+        override
+        public string getname()
+        {
+            return "Heal Magic";
+        }
+        override
+        public int getHealMax()
+        {
+            return 25;
+        }
+        override
+        public int getHealMin()
+        {
+            return 5;
+        }
+        override
+        public int getPoisonMax()
+        {
+            return 0;
+        }
+        override
+        public int getPoisonMin()
+        {
+            return 0;
+        }
+        override
+        public int getBlockMax()
+        {
+            return 0;
+        }
+        override
+        public int getBlockMin()
+        {
+            return 0;
+        }
+        override
+        public int getDamageMax()
+        {
+            return 0;
+        }
+        override
+        public int getDamageMin()
+        {
+            return 0;
         }
     }
 }
