@@ -38,6 +38,7 @@ namespace DesignPatternsFinal
             moves = new List<IAbility>();
             moves.Add(new Attack(this));
             moves.Add(new Defend(this));
+            moves.Add(new Inventory(this));
 			this.level = 1;
 			XP = 0;
             //moves.Add(new Item(this));
@@ -52,6 +53,7 @@ namespace DesignPatternsFinal
 
         public abstract IAbility turn(Party team, Party enemies );
         public abstract Character aim(Party enemy);
+        public abstract Item inventoryShow(Party team, Inventory inv);
 
 		public String levelUp()
 		{	

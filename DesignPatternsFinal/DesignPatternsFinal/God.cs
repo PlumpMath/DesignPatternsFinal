@@ -16,6 +16,13 @@ namespace DesignPatternsFinal
             turn.ShowDialog();
             return turn.getDecision();
         }
+        override
+        public Item inventoryShow(Party team, Inventory inv)
+        {
+            InventoryViewForm form = new InventoryViewForm(inv, this);
+            form.ShowDialog();
+            return form.getDecision();
+        }
 
         override
         public Character aim(Party enemy)

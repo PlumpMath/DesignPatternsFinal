@@ -20,6 +20,11 @@ namespace DesignPatternsFinal
             else
                 return this.moves[(int)MOVES.ATTACK];
         }
+        override
+        public Item inventoryShow(Party team, Inventory inv)
+        {
+            return null;
+        }
 
         override
         public Character aim(Party enemy)

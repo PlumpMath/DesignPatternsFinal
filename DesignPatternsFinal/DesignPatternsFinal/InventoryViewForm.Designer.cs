@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.InventoryCheckBox = new System.Windows.Forms.CheckedListBox();
-            this.EquipInventoryButton = new System.Windows.Forms.Button();
-            this.closeInventoryButton = new System.Windows.Forms.Button();
+            this.InventoryLabel = new System.Windows.Forms.Label();
+            this.equipButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InventoryCheckBox
@@ -41,45 +42,57 @@
             this.InventoryCheckBox.Size = new System.Drawing.Size(260, 184);
             this.InventoryCheckBox.TabIndex = 0;
             // 
-            // EquipInventoryButton
+            // InventoryLabel
             // 
-            this.EquipInventoryButton.Location = new System.Drawing.Point(12, 203);
-            this.EquipInventoryButton.Name = "EquipInventoryButton";
-            this.EquipInventoryButton.Size = new System.Drawing.Size(75, 23);
-            this.EquipInventoryButton.TabIndex = 2;
-            this.EquipInventoryButton.Text = "Equip";
-            this.EquipInventoryButton.UseVisualStyleBackColor = true;
-            this.EquipInventoryButton.Click += new System.EventHandler(this.EquipInventoryButton_Click);
+            this.InventoryLabel.AutoSize = true;
+            this.InventoryLabel.Location = new System.Drawing.Point(12, 199);
+            this.InventoryLabel.Name = "InventoryLabel";
+            this.InventoryLabel.Size = new System.Drawing.Size(0, 13);
+            this.InventoryLabel.TabIndex = 4;
             // 
-            // closeInventoryButton
+            // equipButton
             // 
-            this.closeInventoryButton.Location = new System.Drawing.Point(93, 203);
-            this.closeInventoryButton.Name = "closeInventoryButton";
-            this.closeInventoryButton.Size = new System.Drawing.Size(75, 23);
-            this.closeInventoryButton.TabIndex = 3;
-            this.closeInventoryButton.Text = "Close";
-            this.closeInventoryButton.UseVisualStyleBackColor = true;
-            this.closeInventoryButton.Click += new System.EventHandler(this.closeInventoryButton_Click);
+            this.equipButton.Location = new System.Drawing.Point(12, 215);
+            this.equipButton.Name = "equipButton";
+            this.equipButton.Size = new System.Drawing.Size(75, 23);
+            this.equipButton.TabIndex = 5;
+            this.equipButton.Text = "Equip";
+            this.equipButton.UseVisualStyleBackColor = true;
+            this.equipButton.Click += new System.EventHandler(this.equipButton_Click);
+            // 
+            // closeButton
+            // 
+            this.closeButton.Location = new System.Drawing.Point(94, 215);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(75, 23);
+            this.closeButton.TabIndex = 6;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // InventoryViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.closeInventoryButton);
-            this.Controls.Add(this.EquipInventoryButton);
+            this.Controls.Add(this.closeButton);
+            this.Controls.Add(this.equipButton);
+            this.Controls.Add(this.InventoryLabel);
             this.Controls.Add(this.InventoryCheckBox);
             this.Name = "InventoryViewForm";
             this.Text = "InventoryViewForm";
+            this.Load += new System.EventHandler(this.InventoryViewForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.CheckedListBox InventoryCheckBox;
-        private System.Windows.Forms.Button EquipInventoryButton;
-        private System.Windows.Forms.Button closeInventoryButton;
+        private System.Windows.Forms.Label InventoryLabel;
+        private System.Windows.Forms.Button equipButton;
+        private System.Windows.Forms.Button closeButton;
 
     }
 }

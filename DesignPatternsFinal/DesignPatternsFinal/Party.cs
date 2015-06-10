@@ -8,15 +8,29 @@ namespace DesignPatternsFinal
     public class Party : IEnumerable<Character>
     {
         private List<Character> party;
+        private Inventory inv;
 
         public Party()
         {
             party = new List<Character>();
+            inv = new Inventory();
+            inv.add(new Helmet());
+            inv.add(new Curiass());
+            inv.add(new LongSword());
+            inv.add(new healHP());
+            inv.add(new poisonHP());
+            inv.add(new BowNArrow());
         }
 
-        public Party( List<Character> party )
+        public Party( List<Character> party, Inventory inventory )
         {
             this.party = party;
+            this.inv = inventory;
+        }
+
+        public Inventory getInventory()
+        {
+            return inv;
         }
 
         public void addCharacter( Character character )
