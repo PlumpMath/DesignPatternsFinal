@@ -24,7 +24,10 @@ namespace DesignPatternsFinal
             target.HP = ((int)newHP);
 
             response += owner.Name + " attacked " + target.Name + ".\n";
-            response += target.Name + " lost " + owner.Str + " HP and now has " + target.HP + " left.";
+			if( target.HP > 0 )
+            	response += target.Name + " lost " + owner.Str + " HP and now has " + target.HP + " left.";
+			else
+				response += target.Name + " lost " + owner.Str + " HP and now has 0 left.";
             return response;
         }
 
