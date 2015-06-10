@@ -4,7 +4,7 @@ namespace DesignPatternsFinal
 {
     class Chimera : Beast
     {
-        public Chimera()
+        public Chimera() : base() 
         {
             Name = "Chimera";
             HP = 120;

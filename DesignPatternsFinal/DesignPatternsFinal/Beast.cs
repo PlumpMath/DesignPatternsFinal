@@ -8,10 +8,7 @@ namespace DesignPatternsFinal
 {
     abstract class Beast : Character
     {
-        public Beast()
-        {
-
-        }
+        public Beast() : base() {}
 
         override
         public IAbility turn(Party team, Party enemies)

@@ -4,7 +4,7 @@ namespace DesignPatternsFinal
 {
     class Griffin : Beast
     {
-        public Griffin()
+        public Griffin() : base() 
         {
             Name = "Griffin";
             HP = 300;

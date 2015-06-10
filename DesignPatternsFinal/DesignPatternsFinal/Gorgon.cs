@@ -4,7 +4,7 @@ namespace DesignPatternsFinal
 {
     class Gorgon : Beast
     {
-        public Gorgon()
+        public Gorgon() : base() 
         {
             Name = "Gorgon";
             HP = 220;

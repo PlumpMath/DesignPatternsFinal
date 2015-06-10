@@ -38,7 +38,7 @@ namespace DesignPatternsFinal
             moves = new List<IAbility>();
             moves.Add(new Attack(this));
             moves.Add(new Defend(this));
-			Level = 1;
+			this.level = 1;
 			XP = 0;
             //moves.Add(new Item(this));
         }
@@ -56,7 +56,7 @@ namespace DesignPatternsFinal
 		public String levelUp()
 		{	
 			String retStr = "";
-			if (XP > Level * 500)
+			if (XP > (Level * 500))
 			{
 				HP += 50;
 				maxHP += 50;
@@ -68,7 +68,7 @@ namespace DesignPatternsFinal
 				Con++;
 				Wis++;
 				Cha++;
-				retStr = Name + " leveled up!\n";
+				retStr = Name + " leveled up! \n";
 			}
 			return retStr;
 		}

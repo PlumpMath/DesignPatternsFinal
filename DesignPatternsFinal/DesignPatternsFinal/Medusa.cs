@@ -11,7 +11,7 @@ namespace DesignPatternsFinal
 		private static bool defeated;
 		private static Medusa it;
 
-        public Medusa()
+        public Medusa() : base() 
         {
             Name = "Medusa";
             HP = 1000;
