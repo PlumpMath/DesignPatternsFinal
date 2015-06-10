@@ -40,7 +40,8 @@ namespace DesignPatternsFinal
             inv = party.getInventory();
             Item item = owner.inventoryShow(party, inv);
 
-            response += owner.Name + " has equipped a " + item.getname();
+            response += owner.Name + " has equipped a " + item.getname() + ". ";
+          
             return response;
         }
     }

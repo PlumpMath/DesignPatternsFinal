@@ -73,7 +73,6 @@ namespace DesignPatternsFinal
                 {
                     c.Checked = false;
                 }
-                equipButton_Click(sender, e);
             }
             else
             {
