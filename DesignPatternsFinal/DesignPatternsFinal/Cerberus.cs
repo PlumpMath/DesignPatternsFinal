@@ -11,7 +11,7 @@ namespace DesignPatternsFinal
 		private static bool defeated;
 		private static Cerberus it;
 
-        private Cerberus()
+        private Cerberus() : base() 
         {
             Name = "Cerberus";
             HP = 1000;

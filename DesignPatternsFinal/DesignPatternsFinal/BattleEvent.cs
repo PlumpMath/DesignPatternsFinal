@@ -25,7 +25,7 @@ namespace DesignPatternsFinal
 				a = RandomEnemyGenerator.getEnemies (roomNum);
 				if (!a.isEmpty ()) 
 				{
-					b = new BattleEvent (h, a);
+					b = new Battle(ref h, ref a);
 					State.toBattle (this);
 				}
 			}

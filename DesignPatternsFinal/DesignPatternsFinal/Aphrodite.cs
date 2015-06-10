@@ -4,7 +4,7 @@ namespace DesignPatternsFinal
 {
     public class Aphrodite : God
     {
-        public Aphrodite()
+        public Aphrodite() : base() 
         {
             Name = "Aphrodite";
             HP = 105;

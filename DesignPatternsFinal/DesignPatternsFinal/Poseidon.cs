@@ -4,7 +4,7 @@ namespace DesignPatternsFinal
 {
     public class Poseidon : God
     {
-        public Poseidon()
+        public Poseidon() : base() 
         {
             Name="Poseidon";
             HP = 100;

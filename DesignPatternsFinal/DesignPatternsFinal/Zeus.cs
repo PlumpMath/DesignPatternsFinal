@@ -4,7 +4,7 @@ namespace DesignPatternsFinal
 {
     public class Zeus : God
     {
-        public Zeus()
+        public Zeus() : base() 
         {
             Name = "Zeus";
             HP = 120;

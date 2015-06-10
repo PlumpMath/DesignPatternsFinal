@@ -4,7 +4,7 @@ namespace DesignPatternsFinal
 {
     class Siren : Beast
     {
-        public Siren()
+        public Siren() : base() 
         {
             Name = "Siren";
             HP = 110;

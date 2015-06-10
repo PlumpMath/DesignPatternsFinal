@@ -4,7 +4,7 @@ namespace DesignPatternsFinal
 {
     class Hydra : Beast
     {
-        public Hydra()
+        public Hydra() : base() 
         {
             Name = "Hydra";
             HP = 200;

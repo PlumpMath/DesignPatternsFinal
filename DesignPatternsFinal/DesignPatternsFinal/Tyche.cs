@@ -4,7 +4,7 @@ namespace DesignPatternsFinal
 {
     public class Tyche : God
     {
-        public Tyche()
+        public Tyche() : base() 
         {
             Name = "Tyche";
             HP = 110;

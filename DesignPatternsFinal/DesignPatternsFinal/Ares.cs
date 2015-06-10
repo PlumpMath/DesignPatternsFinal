@@ -4,7 +4,7 @@ namespace DesignPatternsFinal
 {
     public class Ares : God
     {
-        public Ares()
+        public Ares() : base() 
         {
             Name = "Ares";
             HP = 185;

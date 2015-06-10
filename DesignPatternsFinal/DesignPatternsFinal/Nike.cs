@@ -4,7 +4,7 @@ namespace DesignPatternsFinal
 {
     public class Nike : God
     {
-        public Nike()
+        public Nike() : base() 
         {
             Name = "Nike";
             HP = 150;

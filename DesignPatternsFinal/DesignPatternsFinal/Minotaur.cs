@@ -4,7 +4,7 @@ namespace DesignPatternsFinal
 {
     class Minotaur : Beast
     {
-        public Minotaur()
+        public Minotaur() : base() 
         {
             Name = "Minotaur";
             HP = 450;

@@ -4,7 +4,7 @@ namespace DesignPatternsFinal
 {
     public class Nemesis : God
     {
-        public Nemesis()
+        public Nemesis() : base() 
         {
             Name = "Nemesis";
             HP = 145;
