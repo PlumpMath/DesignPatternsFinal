@@ -12,35 +12,76 @@ namespace DesignPatternsFinal
 {
     public partial class InventoryViewForm : Form
     {
-        private Character owner;
-        public InventoryViewForm()
+        private List<Item> items;
+        private Inventory inventory;
+        private Character current;
+        private string response;
+        private Item item;
+        public InventoryViewForm(Inventory obj, Character owner)
         {
+            inventory = obj;
+            current = owner;
             InitializeComponent();
         }
-        public InventoryViewForm(List<Item> obj)
+        public string getResponse()
         {
-            if (obj != null)
+            return response;
+        }
+
+        private void InventoryViewForm_Load(object sender, EventArgs e)
+        {
+            items = inventory.getList();
+            int x = 0;
+            foreach (Item p in items)
             {
-                int x = 0;
-                foreach (Item p in obj)
-                {
-                    CheckBox check = new CheckBox();
-                    //check.Text = p.Name;
-                    check.Location = new System.Drawing.Point(0, 22 * x);
-                    this.InventoryCheckBox.Controls.Add(check);
-                    x++;
-                }
+                CheckBox check = new CheckBox();
+                check.Text = p.getname();
+                check.Location = new System.Drawing.Point(0, 22 * x);
+                this.InventoryCheckBox.Controls.Add(check);
+                x++;
             }
             this.Update();
             this.Show();
+            InventoryLabel.Text = "Choose an item to equip to " + current.Name;
         }
 
-        private void EquipInventoryButton_Click(object sender, EventArgs e)
+        public Item getDecision()
         {
-
+            response = item.getname();
+            Close();
+            return item;
         }
 
-        private void closeInventoryButton_Click(object sender, EventArgs e)
+        private void equipButton_Click(object sender, EventArgs e)
+        {
+            int count = 0;
+            int i = 0;
+            foreach (CheckBox c in this.InventoryCheckBox.Controls)
+            {
+                if(c.Checked)
+                {
+                    for (i = 0; i < items.Count && !items[i].getname().Equals(c.Text); i++) ;
+                    if (i != items.Count)
+                        item = items[i];
+                    count ++;
+                }
+            }
+            if(count > 1 || count <= 0)
+            {
+                MessageBox.Show("Please check only one item, or click the close button.");
+                foreach(CheckBox c in this.InventoryCheckBox.Controls)
+                {
+                    c.Checked = false;
+                }
+                equipButton_Click(sender, e);
+            }
+            else
+            {
+                getDecision();
+            }
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
         {
             Close();
         }

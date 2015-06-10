@@ -33,7 +33,6 @@ namespace DesignPatternsFinal
         }
         protected State()
         {
-
         }
 
         public static void toBattle(Event e)
@@ -45,7 +44,7 @@ namespace DesignPatternsFinal
             currentForm.Show();
             ((BattleViewForm)currentForm).newBattle((BattleEvent)e);
         }
-        public static void toInventory(Event e)
+        public static void toInventory()
         {
             currentForm.Hide();
             currentState = inventoryState;
