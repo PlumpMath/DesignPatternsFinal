@@ -41,7 +41,22 @@ namespace DesignPatternsFinal
             Item item = owner.inventoryShow(party, inv);
 
             response += owner.Name + " has equipped a " + item.getname() + ". ";
-          
+            if(item.getname().Contains("Heal"))
+            {
+                
+            }
+            else if (item.getname().Contains("Poison"))
+            {
+
+            }
+            else if(item.getBlockMax() > 0)
+            {
+
+            }
+            else if(item.getDamageMax() > 0)
+            {
+
+            }
             return response;
         }
     }
