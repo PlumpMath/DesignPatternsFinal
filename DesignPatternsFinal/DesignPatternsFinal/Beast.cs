@@ -41,7 +41,7 @@ namespace DesignPatternsFinal
 			double selection = rand.NextDouble ();
 			if (selection > .6) 
 			{
-				//generate random weapon
+				return RandomItemGenerator.getItem ();
 			}
 			return null;
 		}

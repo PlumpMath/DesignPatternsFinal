@@ -42,7 +42,7 @@ namespace DesignPatternsFinal
 		public Item defeat()
 		{	
 			defeated = true;
-			return null;
+			return new Mace();
 		}
     }
 }
