@@ -31,7 +31,6 @@
             this.InventoryCheckBox = new System.Windows.Forms.CheckedListBox();
             this.InventoryLabel = new System.Windows.Forms.Label();
             this.equipButton = new System.Windows.Forms.Button();
-            this.closeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InventoryCheckBox
@@ -60,22 +59,11 @@
             this.equipButton.UseVisualStyleBackColor = true;
             this.equipButton.Click += new System.EventHandler(this.equipButton_Click);
             // 
-            // closeButton
-            // 
-            this.closeButton.Location = new System.Drawing.Point(94, 215);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(75, 23);
-            this.closeButton.TabIndex = 6;
-            this.closeButton.Text = "Close";
-            this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            // 
             // InventoryViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.closeButton);
             this.Controls.Add(this.equipButton);
             this.Controls.Add(this.InventoryLabel);
             this.Controls.Add(this.InventoryCheckBox);
@@ -92,7 +80,6 @@
         private System.Windows.Forms.CheckedListBox InventoryCheckBox;
         private System.Windows.Forms.Label InventoryLabel;
         private System.Windows.Forms.Button equipButton;
-        private System.Windows.Forms.Button closeButton;
 
     }
 }

@@ -68,7 +68,7 @@ namespace DesignPatternsFinal
             }
             if(count > 1 || count <= 0)
             {
-                MessageBox.Show("Please check only one item, or click the close button.");
+                MessageBox.Show("Please check only one item.");
                 foreach(CheckBox c in this.InventoryCheckBox.Controls)
                 {
                     c.Checked = false;
@@ -78,11 +78,6 @@ namespace DesignPatternsFinal
             {
                 getDecision();
             }
-        }
-
-        private void closeButton_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }
