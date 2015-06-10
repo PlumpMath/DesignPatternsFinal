@@ -78,8 +78,11 @@ namespace DesignPatternsFinal
             else if (away.size() == 0)
             {
                 response += ("You won!\n");
-				foreach (Character him in home)
+				foreach (Character him in home) 
+				{
+					him.HP = him.maxHP;
 					response += him.levelUp ();
+				}
                 this.fighting = false;
             }
             return response;
