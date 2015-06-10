@@ -45,6 +45,9 @@ namespace DesignPatternsFinal
             hero_list.Add(hero5.Name, hero5);
             NewGameForm newGame = new NewGameForm(ref heroParty, ref hero_list);
             InventoryState newInventory = new InventoryState();
+            inventory = newInventory.toInventory();
+            inventory.add(new Helmet());
+            inventory.add(new LongSword());
             this.Hide();
             //gameWorld = new World();
         }

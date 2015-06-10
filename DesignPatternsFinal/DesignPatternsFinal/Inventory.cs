@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatternsFinal
 {
-    public abstract class Inventory : IAbility
+    public class Inventory : IAbility
     {
         private Character owner;
         private System.Collections.Generic.List<Item> items;
@@ -15,8 +15,15 @@ namespace DesignPatternsFinal
         {
             items = new List<Item>();
         }
-        public abstract List<Item> getList(List<Item> items);
+        public List<Item> getList()
+        {
+            return items;
+        }
 
+        public void add(Item item)
+        {
+            items.Add(item);
+        }
         public string getName()
         {
             return "Inventory";
