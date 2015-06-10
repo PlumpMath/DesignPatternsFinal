@@ -24,6 +24,16 @@ namespace DesignPatternsFinal
         {
             items.Add(item);
         }
+
+        public void setList(List<Item> list)
+        {
+            items = list;
+        }
+
+        public void delete(Item item)
+        {
+            items.Remove(item);
+        }
         public string getName()
         {
             return "Inventory";
@@ -41,7 +51,95 @@ namespace DesignPatternsFinal
             Item item = owner.inventoryShow(party, inv);
 
             response += owner.Name + " has equipped a " + item.getname() + ". ";
-          
+            if(item.getname().Contains("Heal"))
+            {
+                Random number = new Random();
+                int max = item.getHealMax();
+                int min = item.getHealMin();
+                int heal = number.Next(min, max + 1);
+                if(item.getname().Contains("Wisdom"))
+                {
+                    owner.Wis += heal; 
+                }
+                else if(item.getname().Contains("Strength"))
+                {
+                    owner.Str += heal;
+                }
+                else if(item.getname().Contains("Magic"))
+                {
+                    owner.Mag += heal;
+                }
+                else if(item.getname().Contains("Health"))
+                {
+                    owner.HP += heal;
+                }
+                else if(item.getname().Contains("Dexterity"))
+                {
+                    owner.Dex += heal;
+                }
+                else if(item.getname().Contains("Constituition"))
+                {
+                    owner.Con += heal;
+                }
+                else if(item.getname().Contains("Charisma"))
+                {
+                    owner.Cha += heal;
+                }
+            }
+            else if (item.getname().Contains("Poison"))
+            {
+                Random number = new Random();
+                int max = item.getPoisonMax();
+                int min = item.getPoisonMin();
+                int poison = number.Next(min, max + 1);
+                if (item.getname().Contains("Wisdom"))
+                {
+                    owner.Wis -= poison;
+                }
+                else if (item.getname().Contains("Strength"))
+                {
+                    owner.Str -= poison;
+                }
+                else if (item.getname().Contains("Magic"))
+                {
+                    owner.Mag -= poison;
+                }
+                else if (item.getname().Contains("Health"))
+                {
+                    owner.HP -= poison;
+                }
+                else if (item.getname().Contains("Dexterity"))
+                {
+                    owner.Dex -= poison;
+                }
+                else if (item.getname().Contains("Constituition"))
+                {
+                    owner.Con -= poison;
+                }
+                else if (item.getname().Contains("Charisma"))
+                {
+                    owner.Cha -= poison;
+                }
+            }
+            else if(item.getBlockMax() > 0)
+            {
+                Random number = new Random();
+                int max = item.getBlockMax();
+                int min = item.getBlockMin();
+                int blk = number.Next(min, max + 1);
+                owner.Dex += blk;
+            }
+            else if(item.getDamageMax() > 0)
+            {
+                Random number = new Random();
+                int max = item.getDamageMax();
+                int min = item.getDamageMin();
+                int dmg = number.Next(min, max + 1);
+                owner.Str += dmg;
+            }
+            inv.delete(item);
+            List<Item> newList = inv.getList();
+            inv.setList(newList);
             return response;
         }
     }
